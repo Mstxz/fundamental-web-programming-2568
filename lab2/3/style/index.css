@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     font-size: 20px;
+    font-family: "Saira", sans-serif;
 }
 
 body {
@@ -18,11 +21,31 @@ table {
     align-items: center;
 }
 
+table tr * {
+    border: none;
+    border-radius: 10px;
+}
+
+th {
+    font-size: 30px;
+    background-color: #6065ae;
+    color: white;
+}
+
 tr * {
     width: 100px;
     height: 70px;
     border: 1px solid black;
     text-align: center;
+}
+
+td {
+    background-color: #f0e0ed;
+}
+
+.another {
+    background-color: #ab88be;
+    color: #dcbbed;
 }
 
 td:hover {
