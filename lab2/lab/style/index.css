@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+
+    * {
+        font-family: "Roboto Flex", sans-serif;
+    }
+
+    body {
+      animation: color 3s linear infinite;
+    }
+
+@keyframes color {
+  0%      { background-color: red; }
+  14.285% { background-color: orange; }
+  28.571% { background-color: yellow; }
+  42.857% { background-color: green; }
+  57.142% { background-color: cyan; }
+  71.428% { background-color: blue; }
+  85.714% { background-color: violet; }
+  100%    { background-color: red; }
+}
+
+    img {
+      border-radius: 10px;
+      margin: 50px 0;
+      animation: rot 200ms linear infinite;
+    }
+
+    @keyframes rot {
+      0% {
+        transform: scaleY(0.9) translateY(90px) rotateY(0deg);
+      }
+      50% {
+        transform: scaleY(1.1) translateY(0px) rotateY(60deg);
+      }
+      100% {
+        transform: scaleY(0.9) translateY(90px);
+      }
+    }
+
+    section {
+        padding: 10px;
+        background-color: lightgray;
+        border-radius: 20px;
+    }
+
+    table {
+        border: 1px solid gray;
+    }
+
+    th {
+        border-bottom: 3px solid black;
+    }
+
+    td {
+        border-bottom: 1px solid black;
+    }
