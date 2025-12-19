@@ -23,6 +23,7 @@ for folder in "$@"; do
 
   # Create files if they don't exist
   touch "$target/style/index.css"
+  touch "$target/script/index.js"
   touch "$target/index.html"
 done
 
