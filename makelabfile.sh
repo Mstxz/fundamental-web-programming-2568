@@ -22,7 +22,7 @@ for folder in "$@"; do
   mkdir -p "$target/style"
 
   # Create files if they don't exist
-  touch "$target/style/style.css"
+  touch "$target/style/index.css"
   touch "$target/index.html"
 done
 
