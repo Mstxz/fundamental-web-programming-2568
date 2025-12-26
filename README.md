@@ -8,3 +8,12 @@
 
 - `commit.sh` -> commit to github
 - `makelabfile.sh` -> make lab folder
+
+# For Better Facilities
+
+- [Adobe Color](https://color.adobe.com/create/color-wheel)
+- [Cubic Bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
+- [HTML Color code](https://htmlcolorcodes.com/)
+- [Fontawesome](https://fontawesome.com/icons)
+- [Dribbble](https://dribbble.com/)
+- [Google Fonts](https://fonts.google.com/)

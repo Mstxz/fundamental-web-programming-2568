@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# At least 2 arguments required: base folder + one subfolder
+mkdir "$1"
+
 if [ "$#" -lt 2 ]; then
   echo "Usage: $0 <base_folder> <subfolder1> [subfolder2 ...]"
   exit 1
@@ -19,7 +20,9 @@ fi
 for folder in "$@"; do
   target="$base_folder/$folder"
 
+  # Create required directories
   mkdir -p "$target/style"
+  mkdir -p "$target/script"
 
   # Create files if they don't exist
   touch "$target/style/index.css"
