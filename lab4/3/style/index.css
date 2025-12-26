@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    border-spacing: 0;
+}
+
+th {
+    padding: 10px 20px;
+    border-bottom: 1px solid lightblue;
+}
