@@ -25,7 +25,12 @@ function addToTable(){
 function addData(){
     data = []
 
-    data.push(recdate.value);
+    if (recdate.value == NaN){
+        data.push(Date.now());
+    }
+    else {
+        data.push(recdate.value);
+    }
     data.push(topic.value);
     if(type.value == "income"){
         data.push(amnt.value);

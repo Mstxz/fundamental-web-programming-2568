@@ -15,7 +15,7 @@ const label = [
     {en: "First Name", th: "ชื่อ"},
     {en: "Last Name", th: "นามสกุล"},
     {en: "Country", th: "ประเทศ"},
-    {en: "Change Language", th: "เปลี่ยนภาษา"},
+    {en: "Change To Thai", th: "เปลี่ยนภาษาอังกฤษ"},
 ]
 
 let n = document.getElementById('name');
@@ -36,9 +36,9 @@ function changelan() {
 
 function setCountries(lang) {
 
-    n.textContent = label[0][lang];
-    sn.textContent = label[1][lang];
-    coun.textContent = label[2][lang];
+    n.textContent = label[0][lang] + ":";
+    sn.textContent = label[1][lang] + ":";
+    coun.textContent = label[2][lang] + ":";
     btn.textContent = label[3][lang];
 
     const selection = document.getElementById("op");
