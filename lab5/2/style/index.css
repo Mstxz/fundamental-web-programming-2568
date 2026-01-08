@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Slim&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nova Slim", system-ui;
+    user-select: none;
+}
+
+body {
+    background: linear-gradient(transparent, black), url('../image/Okhema.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 100px;
+}
+
+.box-content {
+    border: 1px solid goldenrod;
+    width: 400px;
+    background-color: rgba(0,0,0,0.3);
+    color: goldenrod;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.box-content:hover img {
+    animation: pat 0.2s ease-in-out infinite;
+    transition: all ease 0.5s;
+}
+
+
+@media screen and (max-width: 1300px){
+    main {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 700px){
+    main {
+        grid-template-columns: auto;
+    }
+}
+
+.box-content {
+    text-align: center;
+}
+
+@keyframes pat {
+    0% {
+        transform: scaleX(0.85) scaleY(1.05) translateY(-30px);
+    }
+    50% {
+        transform: scaleX(1.2) scaleY(0.75) translateY(10px);
+    }
+    100% {
+        transform: scaleX(0.85) scaleY(1.05) translateY(-30px);
+    }
+}
