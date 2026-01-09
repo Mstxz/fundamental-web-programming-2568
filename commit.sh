@@ -20,3 +20,5 @@ else
 fi
 
 git push
+
+echo "Commit Success \"$0\""
