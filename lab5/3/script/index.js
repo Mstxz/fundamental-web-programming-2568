@@ -14,18 +14,18 @@ let amphoreus = [
         desc: `In that holy city kissed by the dawn, the weaver caresses the golden threads, entwining fates. The Chrysos Heir that bears the "Romance" Coreflame gathered the world's heroes, leading them on a long journey once more to topple the gods, reclaim the divine flame, and grand rebirth to the nearly fallen Amphoreus.`
     },
     {
+        name: 'Cifera',
+        titan: 'Zagreus, Coin of Whimsy',
+        quote: 'Homeward you come, distant wind.',
+        signal: 'Fleet-Footed Traveler',
+        desc: `In the fallen city of bandits, Dolos, the 300 Rogues run wild and free. Race onward, fleet-footed Thief Star Cifera, Chrysos Heir of the "Trickery" Coreflame. May your web of lies spread with the breeze throughout all lands—"Tryna trick me? Not a chance!"`,
+    },
+    {
         name: 'Anaxagoras',
         titan: 'Cerces, Bough of Rift',
         quote: 'The seeds you\'ve sown are already sprouting.',
         signal: 'Demised Scholar',
         desc: `The Grove of Epiphany, where knowledge flourishes and philosophers are born. Yet here stands Anaxagoras the blasphemer, the Chrysos Heir who challenges the Coreflame of Reason. He is questioned: Would you defy the prophecy even if you must bear infamy, and insist on driving the thorns of doubt into the Sacred Tree of wisdom?——"Ridiculous. In a world full of lies, I am the only truth."`
-    },
-    {
-        name: 'Castorice',
-        titan: 'Thanatos, Hand of Shadow',
-        quote: 'The place you reside is the gentle sea of flowers.',
-        signal: 'Servant of Death',
-        desc: `Aidonia, the snowy land that respects and worships death, has already sunken into sweet slumber. O Castorice, daughter of the River of Souls, the Chrysos Heir in search of the Coreflame of "Death," set forth! Guard the lament of the souls in this world, and embrace the solitude of destiny. Life and death is a journey. When a butterfly rests on that dead branch, the withered will be reborn again.`
     },
     {
         name: 'Hyacine',
@@ -35,11 +35,11 @@ let amphoreus = [
         desc: `As the city-state in the clouds crumbles through time, the Twilight Courtyard opens its gates once more, bringing a glimmer of light to Evernight. Physician Hyacinthia is the Chrysos Heir who watches over the Coreflame of Sky. Carrying the will of her ancestors, she mends the torn fabric of dusk and dawn. May the rainbow light pour down, dissolve all grudges, and bring the dawn back to this land.`,
     },
     {
-        name: 'Cifera',
-        titan: 'Zagreus, Coin of Whimsy',
-        quote: 'Homeward you come, distant wind.',
-        signal: 'Fleet-Footed Traveler',
-        desc: `In the fallen city of bandits, Dolos, the 300 Rogues run wild and free. Race onward, fleet-footed Thief Star Cifera, Chrysos Heir of the "Trickery" Coreflame. May your web of lies spread with the breeze throughout all lands—"Tryna trick me? Not a chance!"`,
+        name: 'Castorice',
+        titan: 'Thanatos, Hand of Shadow',
+        quote: 'The place you reside is the gentle sea of flowers.',
+        signal: 'Servant of Death',
+        desc: `Aidonia, the snowy land that respects and worships death, has already sunken into sweet slumber. O Castorice, daughter of the River of Souls, the Chrysos Heir in search of the Coreflame of "Death," set forth! Guard the lament of the souls in this world, and embrace the solitude of destiny. Life and death is a journey. When a butterfly rests on that dead branch, the withered will be reborn again.`
     },
     {
         name: 'Mydeimos',
