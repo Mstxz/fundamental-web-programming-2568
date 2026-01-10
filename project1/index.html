@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
     <script src="script/components/loadfoodlist.js" defer></script>
+    <script src="script/components/loadmenu.js" defer></script>
 
     <style type="text/tailwindcss">
     @layer components {
@@ -22,10 +23,7 @@
         <h1 class="font-bold text-xl">Hello</h1>
         <i class="fa-solid fa-bars text-3xl cursor-pointer" onclick="openMenu()"></i>
     </header>
-    <div id="menu" class="hidden absolute right-0 top-0 bg-[rgba(30,30,30,0.5)] w-[300px] h-screen">
-        <i class="fa-solid fa-xmark text-3xl absolute top-4 right-4" onclick="closeMenu()"></i>
-        <h1 class="absolute top-4 left-2 text-3xl">Menu list</h1>
-    </div>
+    <div id="menu" class="hidden absolute right-0 top-0 bg-[rgba(30,30,30,0.5)] w-[300px] h-screen"></div>
 
     <main class="[&>section]:section-center">
         <section>
@@ -34,7 +32,7 @@
         </section>
         <section>
             <h1>Select Menu</h1>
-            <div id="menulist">
+            <div id="menulist" class="grid grid-cols-2 gap-10 px-20 py-10">
 
             </div>
         </section>
