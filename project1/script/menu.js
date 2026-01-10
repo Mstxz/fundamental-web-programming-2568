@@ -1,17 +1,37 @@
+let menu = document.querySelector('#menu');
+
 function openMenu() {
-    document.querySelector('#menu').classList.remove('hidden');
-    document.querySelector('#menu').classList.add('block');
+    menu.classList.remove('hidden');
+    menu.classList.add('block');
+
+    menu.animate(
+        [
+            { transform: 'translateX(300px)' },
+            { transform: 'translateX(0px)' }
+        ],
+        {
+            duration: 200,
+            easing: 'ease-out',
+            fill: 'forwards'
+        }
+    );
 }
 
 function closeMenu() {
-    document.querySelector('#menu').classList.add('hidden');
-    document.querySelector('#menu').classList.remove('block');
-}
+    const animation = menu.animate(
+        [
+            { transform: 'translateX(0px)' },
+            { transform: 'translateX(300px)' }
+        ],
+        {
+            duration: 200,
+            easing: 'ease-in',
+            fill: 'forwards'
+        }
+    );
 
-function toggleMenu() {
-    if (document.querySelector('#menu').classList.contains('hidden')) {
-        openMenu();
-    } else {
-        closeMenu();
-    }
+    animation.onfinish = () => {
+        menu.classList.add('hidden');
+        menu.classList.remove('block');
+    };
 }

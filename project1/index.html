@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="select-none overflow-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,41 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
-    <script src="script/components/fetchheader.js" defer></script>
-    <script src="script/components/fetchmenu.js" defer></script>
-</head>
-<body class="select-none">
-    <header id="header"></header>
-    <div id="menu"></div>
+    <script src="script/components/loadfoodlist.js" defer></script>
 
-    <main class="flex flex-wrap gap-10 justify-center items-center h-screen">
-        <a href="#" id="foodlist1"></a>
-        <a href="#" id="foodlist2"></a>
-        <a href="#" id="foodlist3"></a>
-        <a href="#" id="foodlist4"></a>
-        <a href="#" id="foodlist5"></a>
-        <a href="#" id="foodlist6"></a>
-        <a href="#" id="foodlist7"></a>
-        <a href="#" id="foodlist8"></a>
-        <a href="#" id="foodlist9"></a>
-        <a href="#" id="foodlist10"></a>
+    <style type="text/tailwindcss">
+    @layer components {
+        .section-center {
+            @apply flex flex-col items-center justify-center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header id="header" class="h-[100px] flex justify-around items-center">
+        <h1 class="font-bold text-xl">Hello</h1>
+        <i class="fa-solid fa-bars text-3xl cursor-pointer" onclick="openMenu()"></i>
+    </header>
+    <div id="menu" class="hidden absolute right-0 top-0 bg-[rgba(30,30,30,0.5)] w-[300px] h-screen">
+        <i class="fa-solid fa-xmark text-3xl absolute top-4 right-4" onclick="closeMenu()"></i>
+        <h1 class="absolute top-4 left-2 text-3xl">Menu list</h1>
+    </div>
+
+    <main class="[&>section]:section-center">
+        <section>
+            <h1 id="greeting" class="text-3xl"></h1>
+            <div id="clock"></div>
+        </section>
+        <section>
+            <h1>Select Menu</h1>
+            <div id="menulist">
+
+            </div>
+        </section>
     </main>
 
     <script src="script/theme.js"></script>
     <script src="script/menu.js"></script>
+    <script src="script/greeting.js"></script>
 </body>
 </html>
