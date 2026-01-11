@@ -2,5 +2,19 @@
 <div class="p-5">
     <h1 class="text-3xl">Menu list</h1>
     <hr>
-    <nav></nav>
+    <nav id="foodnav"></nav>
+    <div id="musiczone" class="flex justify-center p-2 my-5 rounded-xl bg-slate-500">
+        <div class="justify-center items-center w-16 h-16 bg-gradient-to-b from-slate-700 via-slate-950 to-slate-700 rounded-full flex animate-spin">
+            <div class="bg-white w-6 h-6 rounded-full"></div>
+        </div>
+        <div class="flex flex-col w-3/4">
+            <h1 class="text-center text-xl">Gloriville</h1>
+            <nav id="audiocontrollernav" class="flex justify-evenly p-3">
+                <button id="music" onclick="toggleAudio()" class="fa-solid fa-volume-high"></button>
+                <button id="music" onclick="playBefore()" class="fa-solid fa-backward"></button>
+                <button id="music" onclick="togglePauseAudio()" class="fa-solid fa-pause"></button>
+                <button id="music" onclick="playNext()" class="fa-solid fa-forward"></button>
+            </nav>
+        </div>
+    </div>
 </div>

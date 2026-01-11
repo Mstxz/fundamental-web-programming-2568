@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="select-none overflow-hidden">
+<html lang="en" class="select-none overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
         <h1 class="font-bold text-xl">Hello</h1>
         <i class="fa-solid fa-bars text-3xl cursor-pointer" onclick="openMenu()"></i>
     </header>
-    <div id="menu" class="hidden absolute right-0 top-0 bg-[rgba(30,30,30,0.5)] w-[300px] h-screen"></div>
+    <div id="menu" class="hidden right-0 top-0 bg-[rgba(30,30,30,0.5)] w-[300px] h-screen fixed z-40"></div>
 
     <main class="[&>section]:section-center">
         <section>
@@ -32,13 +32,17 @@
         </section>
         <section>
             <h1>Select Menu</h1>
-            <div id="menulist" class="grid grid-cols-2 gap-10 px-20 py-10">
+            <div id="menulist" class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 gap-10 px-20 py-10">
 
             </div>
         </section>
     </main>
 
-    <script src="script/theme.js"></script>
+    <audio src="audio/FoodFantasy_Gloriville.mp3" autoplay loop></audio>
+
+    <script src="script/utils/theme.js"></script>
+    <script src="script/utils/audiohandler.js"></script>
+
     <script src="script/menu.js"></script>
     <script src="script/greeting.js"></script>
 </body>
