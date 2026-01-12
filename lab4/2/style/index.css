@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+form {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+form input {
+    width: 200px;
+    background-color: aliceblue;
+    border: 1px solid gray;
+}

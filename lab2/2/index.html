@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Nancy Freehafer</td>
+            <td><div class="box"></div></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Andrew Cencini</td>
+            <td><div class="box"></div></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jan Kotas</td>
+            <td><div class="box"></div></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Mariya Sergienko</td>
+            <td><div class="box"></div></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Steven Thrope</td>
+            <td><div class="box"></div></td>
+        </tr>
+    </table>
+
+    <script>
+    //Actually, I'm too lazy to write css, that's why I have JS here
+    let a = ['c24452', 'e8b752', '5c8966', '7683c2', '624068'];
+    let b = [53, 69, 97, 5, 29];
+
+    document.querySelectorAll(".box").forEach((el, i) => {
+        const value = b[i];
+
+        if (!isNaN(value)) {
+            el.textContent = value;
+            el.style.width = value + "%";
+
+
+            const colorIndex = Math.min(
+                a.length - 1,
+                Math.floor(value / 20)
+            );
+
+            el.style.backgroundColor = "#" + a[colorIndex];
+            el.style.color = "white";
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
