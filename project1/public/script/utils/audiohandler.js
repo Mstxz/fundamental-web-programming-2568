@@ -1,15 +1,10 @@
 let audioelm = document.querySelector('audio');
 let musiccover = document.getElementById('musiczone');
-audioelm.muted = false; //for development, will be removed in production
+let time = new Date()
 
-let curr = 0;
+let curr = Math.floor(time.getHours / 6);
 
 const music = [
-    {
-        "id": "restaurant",
-        "name": "Restaurant",
-        "source": "audio/FoodFantasy_Restaurant.mp3"
-    },
     {
         "id": "gloriville",
         "name": "Gloriville",
