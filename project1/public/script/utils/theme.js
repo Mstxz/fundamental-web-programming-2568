@@ -1,4 +1,4 @@
-let dark = "bg-slate-900 text-white";
+let dark = "bg-ci-beige-2 text-ci-brown-1";
 let light = "bg-ci-main-1 text-black";
 
 let d = new Date();

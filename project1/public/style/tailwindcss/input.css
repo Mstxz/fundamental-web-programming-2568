@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --color-ci-main-1: #F0D2AE;
+  --color-ci-beige-1: #F0D2AE;
+  --color-ci-beige-2: #E0B48C;
+
+  --color-ci-red-1: #890524;
+  --color-ci-red-2: #57091d;
+
+  --color-ci-brown-1: #6a4e4a;
+  --color-ci-brown-1: #362320;
+
+  --font-main: "Noto Serif", serif;
 }
