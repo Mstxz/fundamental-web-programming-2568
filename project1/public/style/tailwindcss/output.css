@@ -23,6 +23,8 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --radius-3xl: 1.5rem;
@@ -36,6 +38,7 @@
     --default-mono-font-family: var(--font-mono);
     --color-ci-beige-1: #F0D2AE;
     --color-ci-beige-2: #E0B48C;
+    --color-ci-red-1: #890524;
     --color-ci-brown-1: #362320;
     --font-main: "Noto Serif", serif;
   }
@@ -540,6 +543,14 @@
   .bg-\[url\(\'public\/images\/background\/stargazypie_bg\.webp\'\)\] {
     background-image: url('public/images/background/stargazypie_bg.webp');
   }
+  .from-ci-beige-1 {
+    --tw-gradient-from: var(--color-ci-beige-1);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-ci-beige-2 {
+    --tw-gradient-from: var(--color-ci-beige-2);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-slate-700 {
     --tw-gradient-from: var(--color-slate-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -552,6 +563,10 @@
     --tw-gradient-via: var(--color-slate-950);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .to-ci-beige-2 {
+    --tw-gradient-to: var(--color-ci-beige-2);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-red-400 {
     --tw-gradient-to: var(--color-red-400);
@@ -734,6 +749,10 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-8xl {
+    font-size: var(--text-8xl);
+    line-height: var(--tw-leading, var(--text-8xl--line-height));
+  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -750,6 +769,9 @@
   }
   .text-ci-brown-1 {
     color: var(--color-ci-brown-1);
+  }
+  .text-ci-red-1 {
+    color: var(--color-ci-red-1);
   }
   .text-white {
     color: var(--color-white);

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="font-main">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="style/tailwindcss/output.css">
+
     <link rel="icon" href="images/icon.webp">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main class="flex justify-center items-center h-screen flex-col gap-4 bg-linear-to-b from-yellow-200 to-red-400">
+    <main class="flex justify-center items-center h-screen flex-col gap-4 bg-linear-to-b from-ci-beige-1 to-ci-beige-2">
         <img src="/images/assets/Rube.webp" alt="" width="300px">
-        <h1 class="text-3xl">Oops! Page Not Found!</h1>
+        <h1 class="text-8xl font-bold text-ci-red-1">404</h1>
+        <h1 class="text-3xl text-ci-red-1">Oops! Page Not Found!</h1>
+        <p class="text-ci-red-1">The Rubes has interrupted this page.</p>
         <a href="/index.html" class="px-5 py-2 rounded-lg bg-stone-400 hover:scale-110 transition-all ease-in-out">Back to Home</a>
     </main>
 </body>
