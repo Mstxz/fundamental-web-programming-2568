@@ -16,8 +16,12 @@ fetch('components/menu.html').then(res => res.text()).then(data => {
 
         for(let i = 0; i < a.length; i++){
             let linked = document.createElement('a');
-            linked.href = `../${a[i].id}.html`;
-            linked.textContent = a[i].name;
+
+            linked.className = "text-2xl text-ci-beige-1 p-2 flex justify-left items-center gap-4 hover:[&>i]:rotate-90 hover:[&>span]:translate-x-5 [&>*]:transition-transform duration-300 ease-linear";
+            linked.href = `/public/${a[i].id}.html`;
+
+            linked.innerHTML = `<i class="fa-solid fa-utensils"></i><span>${a[i].name}</span>`;
+
 
             document.getElementById('mainmenu').appendChild(linked);
         }

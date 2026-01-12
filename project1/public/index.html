@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" class="select-none overflow-x-hidden font-main">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Recipes</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Recipes</title>
 
-    <link rel="stylesheet" href="style/tailwindcss/output.css">
+        <link rel="stylesheet" href="style/tailwindcss/output.css">
 
-    <link rel="icon" href="images/icon/icon.webp">
-    <link rel="stylesheet" href="style/utils.css">
-    <link rel="stylesheet" href="style/animation.css">
+        <link rel="icon" href="images/icon/icon.webp">
+        <link rel="stylesheet" href="style/utils.css">
+        <link rel="stylesheet" href="style/animation.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
 
-    <script src="script/components/fetchcomponent.js"></script>
+        <script src="script/components/fetchcomponent.js"></script>
 
-    <!-- For just only index.html -->
-    <script src="script/components/loadfoodlist.js" defer></script>
+        <!-- For just only index.html -->
+        <script src="script/components/loadfoodlist.js" defer></script>
 
-</head>
-<body>
-    <header id="header" class="h-25 flex justify-around items-center fixed w-full z-50">
+    </head>
+    <body>
+        <header id="header" class="h-25 flex justify-around items-center fixed w-full z-50">
 
-    </header>
+        </header>
 
-    <div id="menu"></div>
+        <div id="menu"></div>
 
-    <main class="[&>section]:flex [&>section]:justify-center [&>section]:items-center pt-25 gap-y-20 z-10">
-        <section class="flex flex-col">
-            <h1 id="greeting" class="text-3xl"></h1>
-            <div id="clock"></div>
-        </section>
-        <section class="flex-col mt-20">
-            <h1 class="text-3xl">Select Menu</h1>
-            <div id="menulist" class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 gap-10 px-20 py-10">
+        <main class="[&>section]:flex [&>section]:justify-center [&>section]:items-center pt-25 gap-y-20 z-10">
+            <section class="flex flex-col">
+                <h1 id="greeting" class="text-3xl"></h1>
+                <div id="clock"></div>
+            </section>
+            <section class="flex-col mt-20">
+                <h1 class="text-3xl">Select Menu</h1>
+                <div id="menulist" class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 gap-10 px-20 py-10">
 
-            </div>
-        </section>
-    </main>
+                </div>
+            </section>
+        </main>
 
-    <audio src="" autoplay loop></audio>
+        <audio src="" autoplay loop></audio>
 
-    <script src="script/utils/theme.js"></script>
-    <script src="script/utils/audiohandler.js"></script>
+        <script src="script/utils/theme.js"></script>
+        <script src="script/utils/audiohandler.js"></script>
 
-    <script src="script/menu.js"></script>
-    <script src="script/greeting.js"></script>
-</body>
+        <script src="script/menu.js"></script>
+        <script src="script/greeting.js"></script>
+    </body>
 </html>

@@ -1,40 +1,40 @@
 @layer utilities {
     .bg-gloriville {
-        background-image: linear-gradient(to right, rgb(84, 112, 42), rgb(84, 112, 42),rgba(84, 112, 42,0.1), transparent), url('../images/style/Gloriville.webp');
+        background-image: linear-gradient(to right, rgb(84, 112, 42), rgb(84, 112, 42),rgba(84, 112, 42,0.1), transparent), url('../images/assets/Gloriville.webp');
     }
 
     .bg-gloriville #cd div {
-        background-image: url('../images/style/Gloriville_Icon.webp');
+        background-image: url('../images/assets/Gloriville_Icon.webp');
         background-size: cover;
         box-shadow: 0 0 20px black;
     }
 
     .bg-lightkingdom {
-        background-image: linear-gradient(to right, rgb(178, 66, 37), rgba(178,66,37), rgba(178,66,37,0.1), transparent), url('../images/style/Lightkingdom.webp');
+        background-image: linear-gradient(to right, rgb(178, 66, 37), rgba(178,66,37), rgba(178,66,37,0.1), transparent), url('../images/assets/Lightkingdom.webp');
     }
 
     .bg-lightkingdom #cd div {
-        background-image: url('../images/style/Lightkingdom_Icon.webp');
+        background-image: url('../images/assets/Lightkingdom_Icon.webp');
         background-size: cover;
         box-shadow: 0 0 20px black;
     }
 
     .bg-nevras {
-        background-image: linear-gradient(to right, rgb(66, 133, 182), rgb(66, 133, 182), rgba(66, 133, 182, 0.1), transparent), url('../images/style/Nevras.webp');
+        background-image: linear-gradient(to right, rgb(66, 133, 182), rgb(66, 133, 182), rgba(66, 133, 182, 0.1), transparent), url('../images/assets/Nevras.webp');
     }
 
     .bg-nevras #cd div {
-        background-image: url('../images/style/Nevras_Icon.webp');
+        background-image: url('../images/assets/Nevras_Icon.webp');
         background-size: cover;
         box-shadow: 0 0 20px black;
     }
 
     .bg-sakurajima {
-        background-image: linear-gradient(to right, rgb(216, 91, 218), rgb(216, 91, 218), rgba(216, 91, 218, 0.1), transparent), url('../images/style/Sakurajima.webp');
+        background-image: linear-gradient(to right, rgb(216, 91, 218), rgb(216, 91, 218), rgba(216, 91, 218, 0.1), transparent), url('../images/assets/Sakurajima.webp');
     }
 
     .bg-sakurajima #cd div {
-        background-image: url('../images/style/Sakurajima_Icon.webp');
+        background-image: url('../images/assets/Sakurajima_Icon.webp');
         background-size: cover;
         box-shadow: 0 0 20px black;
     }

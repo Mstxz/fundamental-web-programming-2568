@@ -2,7 +2,7 @@
     {
         "id": "paella",
         "name": "Paella",
-        "imglinks": "https://i.pinimg.com/1200x/53/87/38/53873893c257e3d9c9fc76b8c821f4c4.jpg",
+        "imglinks": "../public/images/source/paella.jpg",
         "source": "https://tastesbetterfromscratch.com/paella/#wprm-recipe-container-28045",
         "region": "Spain",
         "foodsoulimg": ""
@@ -10,15 +10,15 @@
     {
         "id": "stargazypie",
         "name": "Stargazy Pie",
-        "imglinks": "https://i.pinimg.com/1200x/b6/e9/9d/b6e99d85738b9b9b9e472adc9d950668.jpg",
+        "imglinks": "../public/images/source/stargazypie.webp",
         "source": "https://www.bbcgoodfood.com/recipes/stargazy-pie",
         "region": "England",
-        "foodsoulimg": "../images/source/stargazypie_foodsouls.webp"
+        "foodsoulimg": "public/images/source/stargazypie_foodsouls.webp"
     },
     {
         "id": "mapotofu",
         "name": "Mapo Tofu",
-        "imglinks": "https://i.pinimg.com/1200x/a4/da/3c/a4da3cd9a8ba6babb13089fc56e54934.jpg",
+        "imglinks": "../public/images/source/mapotofu.jpg",
         "source": "https://www.bbcgoodfood.com/recipes/mapo-tofu",
         "region": "Chinese",
         "foodsoulimg": ""
@@ -50,7 +50,7 @@
     {
         "id": "beefwellington",
         "name": "Beef Wellington",
-        "imglinks": "https://i.pinimg.com/736x/a5/11/15/a511156af07bc840e26c515f994598af.jpg",
+        "imglinks": "../public/images/source/beefwellington.jpg",
         "source": "",
         "region": "France",
         "foodsoulimg": ""

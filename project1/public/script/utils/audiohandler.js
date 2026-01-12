@@ -75,8 +75,10 @@ function togglePauseAudio() {
     if (audioelm.paused) {
         audioelm.play();
         cd.classList.add("animate-spin");
+        document.getElementById('pause').className = "fa-solid fa-pause";
     } else {
         audioelm.pause();
         cd.classList.remove("animate-spin");
+        document.getElementById('pause').className = "fa-solid fa-play";
     }
 }
