@@ -15,7 +15,11 @@ fetch('components/menu.html').then(res => res.text()).then(data => {
         let a = data;
 
         for(let i = 0; i < a.length; i++){
-            console.log(a[i].id);
+            let linked = document.createElement('a');
+            linked.href = `${a[i].id}.html`;
+            linked.textContent = a[i].name;
+
+            document.getElementById('mainmenu').appendChild(linked);
         }
     });
 });

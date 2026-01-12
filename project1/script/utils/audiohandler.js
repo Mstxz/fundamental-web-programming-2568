@@ -1,22 +1,27 @@
 let audioelm = document.querySelector('audio');
-audioelm.muted = true; //for development, will be removed in production
+let musiccover = document.getElementById('musiczone');
+audioelm.muted = false; //for development, will be removed in production
 
-let curr = 3;
+let curr = 0;
 
 const music = [
     {
+        "id": "gloriville",
         "name": "Gloriville",
         "source": "audio/FoodFantasy_Gloriville.mp3"
     },
     {
+        "id": "lightkingdom",
         "name": "Light Kingdom",
         "source": "audio/FoodFantasy_LightKingdom.mp3"
     },
     {
+        "id": "nevras",
         "name": "Nevras",
         "source": "audio/FoodFantasy_Nevras.mp3"
     },
     {
+        "id": "sakurajima",
         "name": "Sakurajima",
         "source": "audio/FoodFantasy_Sakurajima.mp3"
     },
@@ -24,7 +29,6 @@ const music = [
 
 audioelm.volume = 0.4;
 audioelm.src = music[curr].source;
-document.querySelector('#musicname').textContent = music[curr].name;
 
 function toggleAudio(){
     if(audioelm.muted == false){
@@ -38,6 +42,7 @@ function toggleAudio(){
 }
 
 function playNext(){
+    let cover = `bg-${music[curr].id}`;
     if(curr == 3){
         curr = 0;
     }
@@ -47,9 +52,11 @@ function playNext(){
 
     audioelm.src = music[curr].source;
     document.querySelector('#musicname').textContent = music[curr].name;
+    document.querySelector('#musiczone').classList.replace(cover,`bg-${music[curr].id}`);
 }
 
 function playBefore(){
+    let cover = `bg-${music[curr].id}`;
     if(curr == 0){
         curr = 3;
     }
@@ -59,6 +66,7 @@ function playBefore(){
 
     audioelm.src = music[curr].source;
     document.querySelector('#musicname').textContent = music[curr].name;
+    document.querySelector('#musiczone').classList.replace(cover,`bg-${music[curr].id}`);
 }
 
 function togglePauseAudio() {

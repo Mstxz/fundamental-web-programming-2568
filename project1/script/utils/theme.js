@@ -4,7 +4,7 @@ let light = 'bg-slate-200 text-black';
 let d = new Date();
 
 if (d.getHours() < 18 && d.getHours() > 6) {
-    document.body.className = dark;
+    document.body.className = light;
 } else {
     document.body.className = dark;
 }
