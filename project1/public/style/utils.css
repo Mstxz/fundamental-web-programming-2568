@@ -20,7 +20,7 @@
     }
 
     .bg-nevras {
-        background-image: linear-gradient(to right, rgb(66, 133, 182), rgb(66, 133, 182), rgb(66, 133, 182, 0.1), transparent), url('/images/style/Nevras.webp');
+        background-image: linear-gradient(to right, rgb(66, 133, 182), rgb(66, 133, 182), rgba(66, 133, 182, 0.1), transparent), url('/images/style/Nevras.webp');
     }
 
     .bg-nevras #cd div {

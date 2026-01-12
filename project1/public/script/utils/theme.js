@@ -1,10 +1,14 @@
-let dark = 'bg-slate-800 text-white';
-let light = 'bg-slate-200 text-black';
+/* Tailwind safelist */
+
+/* @tailwindcss-intellisense */
+let dark = "bg-slate-900 text-white";
+let light = "bg-ci-main-1 text-black";
 
 let d = new Date();
 
 if (d.getHours() < 18 && d.getHours() > 6) {
     document.body.className = light;
-} else {
+}
+else {
     document.body.className = dark;
 }
