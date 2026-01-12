@@ -15,6 +15,7 @@
     --color-slate-950: oklch(12.9% 0.042 264.695);
     --color-stone-400: oklch(70.9% 0.01 56.259);
     --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
@@ -209,6 +210,12 @@
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
+  .top-25 {
+    top: calc(var(--spacing) * 25);
+  }
+  .top-\[100px\] {
+    top: 100px;
+  }
   .-right-0 {
     right: calc(var(--spacing) * -0);
   }
@@ -245,6 +252,9 @@
   .-z-10 {
     z-index: calc(10 * -1);
   }
+  .-z-20 {
+    z-index: calc(20 * -1);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -272,11 +282,23 @@
       max-width: 96rem;
     }
   }
+  .mx-25 {
+    margin-inline: calc(var(--spacing) * 25);
+  }
+  .mx-\[100px\] {
+    margin-inline: 100px;
+  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
+  .my-25 {
+    margin-block: calc(var(--spacing) * 25);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-25 {
+    margin-top: calc(var(--spacing) * 25);
   }
   .block {
     display: block;
@@ -293,6 +315,12 @@
   .table {
     display: table;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -304,6 +332,12 @@
   }
   .h-50 {
     height: calc(var(--spacing) * 50);
+  }
+  .h-72 {
+    height: calc(var(--spacing) * 72);
+  }
+  .h-128 {
+    height: calc(var(--spacing) * 128);
   }
   .h-\[100px\] {
     height: 100px;
@@ -359,8 +393,17 @@
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
+  .w-\[0px\] {
+    width: 0px;
+  }
   .w-\[200px\] {
     width: 200px;
+  }
+  .w-\[350px\] {
+    width: 350px;
+  }
+  .w-\[400px\] {
+    width: 400px;
   }
   .w-\[500px\] {
     width: 500px;
@@ -482,8 +525,20 @@
     }
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\'\'\)\] {
+    background-image: url('');
+  }
+  .bg-\[url\(\'\/images\/background\/stargazypie_bg\.webp\'\)\] {
+    background-image: url('/images/background/stargazypie_bg.webp');
+  }
   .bg-\[url\(\'\/images\/source\/stargazypie\.webp\'\)\] {
     background-image: url('/images/source/stargazypie.webp');
+  }
+  .bg-\[url\(\'https\:\/\/static\.wikia\.nocookie\.net\/food-fantasy\/images\/7\/7c\/Bg-Basic-Stargazy_Pie\.jpg\/revision\/latest\/scale-to-width-down\/1000\?cb\=20211017072738\'\)\] {
+    background-image: url('https://static.wikia.nocookie.net/food-fantasy/images/7/7c/Bg-Basic-Stargazy_Pie.jpg/revision/latest/scale-to-width-down/1000?cb=20211017072738');
+  }
+  .bg-\[url\(\'public\/images\/background\/stargazypie_bg\.webp\'\)\] {
+    background-image: url('public/images/background/stargazypie_bg.webp');
   }
   .from-slate-700 {
     --tw-gradient-from: var(--color-slate-700);
@@ -521,6 +576,39 @@
   .object-fill {
     object-fit: fill;
   }
+  .object-\[-10px_-50px\] {
+    object-position: -10px -50px;
+  }
+  .object-\[-20\%_-5\%\] {
+    object-position: -20% -5%;
+  }
+  .object-\[-20\%_-30\%\] {
+    object-position: -20% -30%;
+  }
+  .object-\[-20\%_-50\%\] {
+    object-position: -20% -50%;
+  }
+  .object-\[-20\%_-50px\] {
+    object-position: -20% -50px;
+  }
+  .object-\[-20\%_5\%\] {
+    object-position: -20% 5%;
+  }
+  .object-\[-20\%_10\%\] {
+    object-position: -20% 10%;
+  }
+  .object-\[-20px_-50px\] {
+    object-position: -20px -50px;
+  }
+  .object-\[-40\%_10\%\] {
+    object-position: -40% 10%;
+  }
+  .object-\[-40\%_30\%\] {
+    object-position: -40% 30%;
+  }
+  .object-\[-50\%_10\%\] {
+    object-position: -50% 10%;
+  }
   .object-\[0px_20px\] {
     object-position: 0px 20px;
   }
@@ -529,6 +617,9 @@
   }
   .object-\[0px_150px\] {
     object-position: 0px 150px;
+  }
+  .object-\[10px_-50px\] {
+    object-position: 10px -50px;
   }
   .object-\[50px_20px\] {
     object-position: 50px 20px;
@@ -553,6 +644,21 @@
   }
   .object-\[100px_20px\] {
     object-position: 100px 20px;
+  }
+  .object-\[150px-0\] {
+    object-position: 150px-0;
+  }
+  .object-\[150px_-50px\] {
+    object-position: 150px -50px;
+  }
+  .object-\[150px_0\] {
+    object-position: 150px 0;
+  }
+  .object-\[150px_\] {
+    object-position: 150px ;
+  }
+  .object-\[_0\] {
+    object-position:  0;
   }
   .object-bottom-left {
     object-position: left bottom;
@@ -584,8 +690,17 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .p-20 {
+    padding: calc(var(--spacing) * 20);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
   }
   .px-20 {
     padding-inline: calc(var(--spacing) * 20);
@@ -601,6 +716,9 @@
   }
   .pt-25 {
     padding-top: calc(var(--spacing) * 25);
+  }
+  .pt-128 {
+    padding-top: calc(var(--spacing) * 128);
   }
   .text-center {
     text-align: center;
@@ -632,6 +750,9 @@
   }
   .text-ci-brown-1 {
     color: var(--color-ci-brown-1);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -742,6 +863,11 @@
   .md\:w-\[250px\] {
     @media (width >= 48rem) {
       width: 250px;
+    }
+  }
+  .md\:w-\[350px\] {
+    @media (width >= 48rem) {
+      width: 350px;
     }
   }
   .md\:grid-cols-2 {
