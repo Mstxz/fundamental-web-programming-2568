@@ -16,7 +16,7 @@ fetch('components/menu.html').then(res => res.text()).then(data => {
 
         for(let i = 0; i < a.length; i++){
             let linked = document.createElement('a');
-            linked.href = `${a[i].id}.html`;
+            linked.href = `../${a[i].id}.html`;
             linked.textContent = a[i].name;
 
             document.getElementById('mainmenu').appendChild(linked);
