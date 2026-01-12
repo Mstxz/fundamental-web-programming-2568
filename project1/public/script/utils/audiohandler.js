@@ -6,6 +6,11 @@ let curr = 0;
 
 const music = [
     {
+        "id": "restaurant",
+        "name": "Restaurant",
+        "source": "audio/FoodFantasy_Restaurant.mp3"
+    },
+    {
         "id": "gloriville",
         "name": "Gloriville",
         "source": "audio/FoodFantasy_Gloriville.mp3"
@@ -24,7 +29,7 @@ const music = [
         "id": "sakurajima",
         "name": "Sakurajima",
         "source": "audio/FoodFantasy_Sakurajima.mp3"
-    },
+    }
 ]
 
 audioelm.volume = 0.4;
@@ -43,7 +48,7 @@ function toggleAudio(){
 
 function playNext(){
     let cover = `bg-${music[curr].id}`;
-    if(curr == 3){
+    if(curr == music.length - 1){
         curr = 0;
     }
     else {
@@ -58,7 +63,7 @@ function playNext(){
 function playBefore(){
     let cover = `bg-${music[curr].id}`;
     if(curr == 0){
-        curr = 3;
+        curr = music.length - 1;
     }
     else{
         curr -= 1;

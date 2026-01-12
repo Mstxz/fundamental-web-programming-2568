@@ -1,4 +1,13 @@
 @layer utilities {
+    .bg-restaurant {
+        background-image: linear-gradient(to right, rgb(182, 112, 42), rgb(182, 112, 42),rgba(182, 112, 42,0.1), transparent), url('../images/assets/Restaurant.webp');
+    }
+
+    .bg-restaurant #cd div {
+        background-image: url('../images/assets/Restaurant_Icon.webp');
+        background-size: cover;
+        box-shadow: 0 0 20px black;
+    }
     .bg-gloriville {
         background-image: linear-gradient(to right, rgb(84, 112, 42), rgb(84, 112, 42),rgba(84, 112, 42,0.1), transparent), url('../images/assets/Gloriville.webp');
     }
