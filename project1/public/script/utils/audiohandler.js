@@ -2,7 +2,7 @@ let audioelm = document.querySelector('audio');
 let musiccover = document.getElementById('musiczone');
 let time = new Date()
 
-let curr = Math.floor(time.getHours / 6);
+let curr = Math.floor(time.getHours() / 6);
 
 const music = [
     {
