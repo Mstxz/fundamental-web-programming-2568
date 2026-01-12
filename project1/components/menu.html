@@ -1,0 +1,23 @@
+<i class="fa-solid fa-xmark text-3xl absolute top-4 right-4" onclick="closeMenu()"></i>
+<div class="p-5">
+    <h1 class="text-3xl">Menu list</h1>
+    <hr>
+    <nav id="mainmenu" class="flex flex-col py-5">
+        <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
+    </nav>
+    <div id="musiczone" class="flex justify-center items-center p-2 my-5 rounded-xl bg-slate-500">
+        <div id="cd" class="justify-center items-center w-20 h-20 bg-gradient-to-b from-slate-700 via-slate-950 to-slate-700 rounded-full flex animate-spin">
+            <div class="bg-white w-8 h-8 rounded-full"></div>
+        </div>
+        <div class="flex flex-col w-3/4">
+            <h1 id="musicname" class="text-center text-xl">Gloriville</h1>
+            <nav id="audiocontrollernav" class="flex justify-evenly p-3 [&>button]:text-2xl">
+                <button id="mute" onclick="toggleAudio()" class="fa-solid fa-volume-high"></button>
+                <button id="playbefore" onclick="playBefore()" class="fa-solid fa-backward"></button>
+                <button id="pause" onclick="togglePauseAudio()" class="fa-solid fa-pause"></button>
+                <button id="playnext" onclick="playNext()" class="fa-solid fa-forward"></button>
+            </nav>
+        </div>
+    </div>
+</div>

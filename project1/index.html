@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="select-none overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="images/icon.webp">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="script/components/fetchcomponent.js"></script>
+    <script src="script/components/loadfoodlist.js" defer></script>
+
+    <style type="text/tailwindcss">
+    @layer components {
+        .section-center {
+            @apply flex items-center justify-center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header id="header" class="h-[100px] flex justify-around items-center fixed w-full">
+
+    </header>
+
+    <div id="menu"></div>
+
+    <main class="[&>section]:section-center pt-[100px] gap-y-20">
+        <section class="flex-col">
+            <h1 id="greeting" class="text-3xl"></h1>
+            <div id="clock"></div>
+        </section>
+        <section class="flex-col mt-20">
+            <h1 class="text-3xl">Select Menu</h1>
+            <div id="menulist" class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 gap-10 px-20 py-10">
+
+            </div>
+        </section>
+    </main>
+
+    <audio src="" autoplay loop></audio>
+
+    <script src="script/utils/theme.js"></script>
+    <script src="script/utils/audiohandler.js"></script>
+
+    <script src="script/menu.js"></script>
+    <script src="script/greeting.js"></script>
+</body>
+</html>
