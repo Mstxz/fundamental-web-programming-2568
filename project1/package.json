@@ -6,8 +6,7 @@
 
   "scripts": {
     "tw": "tailwindcss -i ./public/style/tailwindcss/input.css -o ./public/style/tailwindcss/output.css --watch",
-    "serve": "npx serve public",
-    "build": "tailwindcss -i ./public/style/tailwindcss/input.css -o ./public/style/tailwindcss/output.css --minify"
+    "serve": "npx serve public"
   },
 
   "author": "Mstxz",
