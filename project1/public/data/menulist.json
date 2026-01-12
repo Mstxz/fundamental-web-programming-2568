@@ -5,7 +5,7 @@
     "imglinks": "/images/source/paella.jpg",
     "source": "https://tastesbetterfromscratch.com/paella/#wprm-recipe-container-28045",
     "region": "Spain",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/paella_foodsouls.webp"
   },
   {
     "id": "stargazypie",
@@ -21,7 +21,7 @@
     "imglinks": "/images/source/mapotofu.jpg",
     "source": "https://www.bbcgoodfood.com/recipes/mapo-tofu",
     "region": "China",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/mapotofu_foodsouls.webp"
   },
   {
     "id": "buddhastemptation",
@@ -29,7 +29,7 @@
     "imglinks": "/images/source/buddhastemptation.jpg",
     "source": "https://foodergolove.wordpress.com/2013/09/23/buddha-jumped-over-the-wall-the-most-ridiculously-complicated-recipe-in-the-world/",
     "region": "China",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/buddhastemptation_foodsouls.webp"
   },
   {
     "id": "bouillabaisse",
@@ -37,23 +37,23 @@
     "imglinks": "/images/source/bouillabaisse.jpg",
     "source": "",
     "region": "France",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/bouillabaisse_foodsouls.webp"
   },
   {
-    "id": "ratatouille",
-    "name": "Ratatouille",
-    "imglinks": "/images/source/ratatouille.jpg",
+    "id": "minestrone",
+    "name": "Minestrone Soup",
+    "imglinks": "/images/source/minestrone.jpg",
     "source": "",
-    "region": "France",
-    "foodsoulimg": ""
+    "region": "Italy",
+    "foodsoulimg": "/images/source/minestrone_foodsouls.webp"
   },
   {
     "id": "beefwellington",
     "name": "Beef Wellington",
     "imglinks": "/images/source/beefwellington.jpg",
     "source": "",
-    "region": "France",
-    "foodsoulimg": ""
+    "region": "England",
+    "foodsoulimg": "/images/source/beefwellington_foodsouls.webp"
   },
   {
     "id": "burrito",
@@ -61,7 +61,7 @@
     "imglinks": "/images/source/burrito.jpg",
     "source": "https://cooking.nytimes.com/recipes/1024725-easy-burritos",
     "region": "Mexico",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/burrito_foodsouls.webp"
   },
   {
     "id": "foiegras",
@@ -69,7 +69,7 @@
     "imglinks": "/images/source/foiegras.jpg",
     "source": "",
     "region": "France",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/foiegras_foodsouls.webp"
   },
   {
     "id": "bibimbap",
@@ -77,6 +77,6 @@
     "imglinks": "/images/source/bibimbap.jpg",
     "source": "",
     "region": "Korea",
-    "foodsoulimg": ""
+    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp"
   }
 ]
