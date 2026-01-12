@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-ci-main-1: #F0D2AE;
+}

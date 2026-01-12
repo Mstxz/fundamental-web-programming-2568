@@ -3,37 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food Recipes</title>
+
+    <link rel="stylesheet" href="style/tailwindcss/output.css">
 
     <link rel="icon" href="images/icon/icon.webp">
     <link rel="stylesheet" href="style/utils.css">
     <link rel="stylesheet" href="style/animation.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
-    <script src="https://cdn.tailwindcss.com/"></script>
 
     <script src="script/components/fetchcomponent.js"></script>
+
+    <!-- For just only index.html -->
     <script src="script/components/loadfoodlist.js" defer></script>
 
-    <style type="text/tailwindcss">
-    @layer components {
-        .section-center {
-            @apply flex items-center justify-center;
-        }
-    }
-
-
-    </style>
 </head>
 <body>
-    <header id="header" class="h-[100px] flex justify-around items-center fixed w-full">
+    <header id="header" class="h-25 flex justify-around items-center fixed w-full">
 
     </header>
 
     <div id="menu"></div>
 
-    <main class="[&>section]:section-center pt-[100px] gap-y-20">
-        <section class="flex-col">
+    <main class="[&>section]:flex [&>section]:justify-center [&>section]:items-center pt-25 gap-y-20">
+        <section class="flex flex-col">
             <h1 id="greeting" class="text-3xl"></h1>
             <div id="clock"></div>
         </section>

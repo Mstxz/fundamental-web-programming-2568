@@ -1,6 +1,0 @@
-@import "tailwindcss";
-
-@theme {
-  --color-primary: #ffcea9; /* Custom primary color */
-  /* ... add other variables like spacing, etc. */
-}
