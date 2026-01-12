@@ -1,6 +1,3 @@
-/* Tailwind safelist */
-
-/* @tailwindcss-intellisense */
 let dark = "bg-slate-900 text-white";
 let light = "bg-ci-main-1 text-black";
 
