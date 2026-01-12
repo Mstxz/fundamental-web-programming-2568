@@ -1,5 +1,7 @@
 let audioelm = document.querySelector('audio');
-let curr = 0;
+audioelm.muted = true; //for development, will be removed in production
+
+let curr = 3;
 
 const music = [
     {
@@ -22,15 +24,16 @@ const music = [
 
 audioelm.volume = 0.4;
 audioelm.src = music[curr].source;
+document.querySelector('#musicname').textContent = music[curr].name;
 
 function toggleAudio(){
     if(audioelm.muted == false){
         audioelm.muted = true;
-        document.querySelector('#music').className = 'fa-solid fa-volume-xmark';
+        document.querySelector('#mute').className = 'fa-solid fa-volume-xmark';
     }
     else {
         audioelm.muted = false;
-        document.querySelector('#music').className = 'fa-solid fa-volume-high';
+        document.querySelector('#mute').className = 'fa-solid fa-volume-high';
     }
 }
 
@@ -43,6 +46,7 @@ function playNext(){
     }
 
     audioelm.src = music[curr].source;
+    document.querySelector('#musicname').textContent = music[curr].name;
 }
 
 function playBefore(){
@@ -54,13 +58,17 @@ function playBefore(){
     }
 
     audioelm.src = music[curr].source;
+    document.querySelector('#musicname').textContent = music[curr].name;
 }
 
-function togglePauseAudio(){
-    if (audioelm.paused){
+function togglePauseAudio() {
+    const cd = document.getElementById('cd');
+
+    if (audioelm.paused) {
         audioelm.play();
-    }
-    else {
+        cd.classList.add("animate-spin");
+    } else {
         audioelm.pause();
+        cd.classList.remove("animate-spin");
     }
 }

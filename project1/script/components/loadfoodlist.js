@@ -11,7 +11,8 @@ async function loadFoodTemplate() {
 function buildMenuItem(menu, template, index) {
     const menuelm = document.createElement('a');
 
-    menuelm.className = "flex flex-row lg:flex-col md:flex-col sm:flex-row items-center border bg-red p-5 rounded-xl cursor-pointer opacity-0 w-[500px] lg:w-[250px] md:w-[250px] sm:w-[500px] hover:bg-red-700";
+    menuelm.className = "flex flex-row lg:flex-col md:flex-col sm:flex-row items-center border-b-4 border-r-4 border-t border-l border-amber-500 bg-red p-5 cursor-pointer opacity-0 w-[500px] lg:w-[250px] md:w-[250px] sm:w-[500px]";
+    menuelm.href = `${menu.id}`
     menuelm.innerHTML = template;
 
     menuelm.querySelector('img').src = menu.imglinks;
