@@ -12,7 +12,7 @@ function buildMenuItem(menu, template, index) {
     const menuelm = document.createElement('a');
 
     menuelm.className = `flex flex-row lg:flex-col md:flex-col sm:flex-row items-center border-b-8 border-r-4 border-t border-l rounded-tl-3xl rounded-br-lg border-red-800 p-5 cursor-pointer opacity-0 w-[500px] lg:w-[250px] md:w-[250px] sm:w-[500px] bg-ci-beige-1 text-black text-xl text-center`;
-    menuelm.href = `${menu.id}`
+    menuelm.href = `../../${menu.id}.html`
     menuelm.innerHTML = template;
 
     menuelm.querySelector('img').src = menu.imglinks;
