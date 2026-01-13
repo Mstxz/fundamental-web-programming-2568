@@ -4,6 +4,8 @@ let time = new Date()
 
 let curr = Math.floor(time.getHours() / 6);
 
+audioelm.muted = true;
+
 const music = [
     {
         "id": "gloriville",
@@ -74,11 +76,11 @@ function togglePauseAudio() {
 
     if (audioelm.paused) {
         audioelm.play();
-        cd.classList.add("animate-spin");
+        cd.style.animation = "spin  2.5s linear infinite";
         document.getElementById('pause').className = "fa-solid fa-pause";
     } else {
         audioelm.pause();
-        cd.classList.remove("animate-spin");
+        cd.style.animation = "none";
         document.getElementById('pause').className = "fa-solid fa-play";
     }
 }

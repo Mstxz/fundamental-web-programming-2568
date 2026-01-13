@@ -31,27 +31,40 @@
     <main class="w-full">
         <section class="flex justify-center items-center pt-25 w-full h-25">
             <div class="absolute bg-[url('/images/background/stargazypie_bg.webp')] bg-cover bg-center w-full text-center text-2xl h-128 top-25 -z-20"></div>
-            <img draggable="false" src="images/source/stargazypie_foodsouls.webp" class="absolute w-full h-128 top-25 object-cover object-[-40%_10%]">
+            <img draggable="false" src="images/source/stargazypie_foodsouls.webp" class="absolute w-full h-128 top-25 object-cover object-center lg:object-[10%_15%] md:object-[-40%_10%]">
         </section>
 
-        <section class="pt-128">
+        <section class="pt-128 flex justify-evenly [&>div]:w-1/2">
+            <div class="p-10 bg-ci-green-2 text-white m-5 border-ci-brown-1 border-20 shadow-inner shadow-ci-green-3">
+                <img src="images/source/stargazypie.webp" class="w-full">
+                <div class="flex gap-4 flex-col">
+                    <h1 class="text-2xl font-bold">Stargazy Pie</h1>
+                    <a target="_blank" href="https://www.bbcgoodfood.com/recipes/stargazy-pie" class="bg-ci-red-1 text-white px-4 py-2 rounded-xl w-30 flex justify-center gap-2 items-center">Source <i class="fa-solid fa-book text-xl"></i></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit necessitatibus, placeat voluptatem autem consequuntur laudantium ipsa veniam id facere iste sunt eligendi tenetur quasi sint provident quidem accusamus! Beatae, eius?</p>
+                </div>
+            </div>
             <div class="p-10">
                 <h1 class="text-3xl">Ingredients</h1>
-                <ul>
-                    <li>Eggs</li>
-                    <li>Saffron Strands</li>
-                    <li>Whole Milk</li>
-                    <li>Butter</li>
-                    <li>Leek</li>
-                    <li>Smoked Streaky Bacon</li>
-                    <li>Floury Potato</li>
-                    <li>Plain Flour</li>
-                    <li>Double Cream</li>
-                    <li>Chives</li>
-                    <li>Sardine</li>
-                    <li>Puff Pastry</li>
+                <ul class="list-disc marker:mr-2 marker:scale-40 text-lg">
+                    <li>ไข่</li>
+                    <li>เส้นหญ้าฝรั่น</li>
+                    <li>นมสดเต็มมันเนย</li>
+                    <li>เนย</li>
+                    <li>ต้นกระเทียมฝรั่ง (Leek)</li>
+                    <li>เบคอนรมควันแบบติดมัน</li>
+                    <li>มันฝรั่งเนื้อแป้ง</li>
+                    <li>แป้งสาลีอเนกประสงค์</li>
+                    <li>วิปปิ้งครีมชนิดไขมันสูง</li>
+                    <li>กุยช่ายฝรั่ง (Chives)</li>
+                    <li>ปลาซาร์ดีน</li>
+                    <li>แป้งพัฟเพสตรี้</li>
+
                 </ul>
             </div>
+        </section>
+
+        <section id="method" class="px-10" >
+            <h1 class="text-3xl">How to Make</h1>
         </section>
     </main>
 
@@ -59,6 +72,7 @@
 
     <script src="script/utils/theme.js"></script>
     <script src="script/utils/audiohandler.js"></script>
+    <script src="script/utils/loadmethod.js"></script>
 
     <script src="script/menu.js"></script>
 </body>

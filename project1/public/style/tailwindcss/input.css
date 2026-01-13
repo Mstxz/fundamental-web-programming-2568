@@ -10,7 +10,11 @@
   --color-ci-red-2: #57091d;
 
   --color-ci-brown-1: #6a4e4a;
-  --color-ci-brown-1: #362320;
+  --color-ci-brown-2: #362320;
+
+  --color-ci-green-1: #6b765c;
+  --color-ci-green-2: #3b4a38;
+  --color-ci-green-3: #1c2d2a;
 
   --font-main: "Noto Serif", serif;
 }
