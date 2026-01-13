@@ -224,6 +224,9 @@
   .-z-20 {
     z-index: calc(20 * -1);
   }
+  .-z-40 {
+    z-index: calc(40 * -1);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -232,6 +235,9 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .z-\[1000\] {
+    z-index: 1000;
   }
   .container {
     width: 100%;
@@ -257,14 +263,23 @@
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
+  .my-128 {
+    margin-block: calc(var(--spacing) * 128);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-128 {
+    margin-top: calc(var(--spacing) * 128);
   }
   .block {
     display: block;
   }
   .flex {
     display: flex;
+  }
+  .flow-root {
+    display: flow-root;
   }
   .grid {
     display: grid;
@@ -284,11 +299,17 @@
   .h-25 {
     height: calc(var(--spacing) * 25);
   }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
   .h-50 {
     height: calc(var(--spacing) * 50);
   }
   .h-128 {
     height: calc(var(--spacing) * 128);
+  }
+  .h-150 {
+    height: calc(var(--spacing) * 150);
   }
   .h-\[100px\] {
     height: 100px;
@@ -373,6 +394,9 @@
   }
   .overflow-x-hidden {
     overflow-x: hidden;
+  }
+  .rounded {
+    border-radius: 0.25rem;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -463,6 +487,13 @@
     --tw-gradient-from: var(--color-slate-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-transparent {
+    --tw-gradient-from: transparent;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-50\% {
+    --tw-gradient-from-position: 50%;
+  }
   .via-slate-950 {
     --tw-gradient-via: var(--color-slate-950);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
@@ -479,6 +510,12 @@
   .to-slate-700 {
     --tw-gradient-to: var(--color-slate-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-5\% {
+    --tw-gradient-to-position: 5%;
+  }
+  .to-50\% {
+    --tw-gradient-to-position: 50%;
   }
   .bg-cover {
     background-size: cover;
@@ -764,11 +801,69 @@
       object-position: 10% 15%;
     }
   }
+  .\[\&\]\:rounded {
+    border-radius: 0.25rem;
+  }
   .\[\&\>\*\]\:transition-transform {
     &>* {
       transition-property: transform, translate, scale, rotate;
       transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
       transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .\[\&\>a\]\:flex {
+    &>a {
+      display: flex;
+    }
+  }
+  .\[\&\>a\]\:w-20 {
+    &>a {
+      width: calc(var(--spacing) * 20);
+    }
+  }
+  .\[\&\>a\]\:w-25 {
+    &>a {
+      width: calc(var(--spacing) * 25);
+    }
+  }
+  .\[\&\>a\]\:items-center {
+    &>a {
+      align-items: center;
+    }
+  }
+  .\[\&\>a\]\:justify-evenly {
+    &>a {
+      justify-content: space-evenly;
+    }
+  }
+  .\[\&\>a\]\:gap-4 {
+    &>a {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+  .\[\&\>a\]\:rounded {
+    &>a {
+      border-radius: 0.25rem;
+    }
+  }
+  .\[\&\>a\]\:rounded-lg {
+    &>a {
+      border-radius: var(--radius-lg);
+    }
+  }
+  .\[\&\>a\]\:bg-ci-red-1 {
+    &>a {
+      background-color: var(--color-ci-red-1);
+    }
+  }
+  .\[\&\>a\]\:p-2 {
+    &>a {
+      padding: calc(var(--spacing) * 2);
+    }
+  }
+  .\[\&\>a\]\:text-white {
+    &>a {
+      color: var(--color-white);
     }
   }
   .\[\&\>button\]\:text-2xl {

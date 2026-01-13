@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
 
-    <script src="script/components/fetchcomponent.js"></script>
+    <script src="script/components/fetchcomponent.js" defer></script>
 
     <style type="text/tailwindcss">
     @layer components {
@@ -28,13 +28,13 @@
 
     <div id="menu"></div>
 
-    <main class="w-full">
-        <section class="flex justify-center items-center pt-25 w-full h-25">
+    <main class="w-full flow-root">
+        <section class="flex justify-center items-center pt-25 w-full h-25 fixed -z-40">
             <div class="absolute bg-[url('/images/background/stargazypie_bg.webp')] bg-cover bg-center w-full text-center text-2xl h-128 top-25 -z-20"></div>
             <img draggable="false" src="images/source/stargazypie_foodsouls.webp" class="absolute w-full h-128 top-25 object-cover object-center lg:object-[10%_15%] md:object-[-40%_10%]">
         </section>
 
-        <section class="pt-128 flex justify-evenly [&>div]:w-1/2">
+        <section class="mt-128 flex justify-evenly [&>div]:w-1/2 bg-ci-beige-2">
             <div class="p-10 bg-ci-green-2 text-white m-5 border-ci-brown-1 border-20 shadow-inner shadow-ci-green-3">
                 <img src="images/source/stargazypie.webp" class="w-full">
                 <div class="flex gap-4 flex-col">
@@ -63,8 +63,13 @@
             </div>
         </section>
 
-        <section id="method" class="px-10" >
+        <section id="method" class="px-10 bg-ci-beige-2" >
             <h1 class="text-3xl">How to Make</h1>
+        </section>
+
+        <section class="flex justify-around items-center h-30 bg-ci-beige-2 [&>a]:text-white [&>a]:bg-ci-red-1 [&>a]:p-2 [&>a]:rounded-lg [&>a]:w-25 [&>a]:flex [&>a]:justify-evenly [&>a]:items-center">
+            <a href=""><i class="fa-solid fa-angles-left"></i>Previous</a>
+            <a href="">Next<i class="fa-solid fa-angles-right"></i></a>
         </section>
     </main>
 
@@ -72,7 +77,7 @@
 
     <script src="script/utils/theme.js"></script>
     <script src="script/utils/audiohandler.js"></script>
-    <script src="script/utils/loadmethod.js"></script>
+    <script src="script/components/loadmethod.js"></script>
 
     <script src="script/menu.js"></script>
 </body>

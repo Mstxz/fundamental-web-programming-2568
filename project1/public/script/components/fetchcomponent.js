@@ -1,7 +1,7 @@
 fetch('components/header.html').then(res => res.text()).then(data => {
     let head = document.querySelector('header');
 
-    head.className = "h-[100px] flex justify-around items-center fixed w-full";
+    head.className = "h-[100px] flex justify-around items-center fixed w-full z-[1000] bg-ci-red-1 text-white";
     head.innerHTML = data;
 })
 
