@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -16,5 +16,5 @@
   --color-ci-green-2: #3b4a38;
   --color-ci-green-3: #1c2d2a;
 
-  --font-main: "Noto Serif", serif;
+  --font-ui: "Noto Serif", "Athiti", serif, sans-serif;
 }

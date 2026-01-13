@@ -2,9 +2,9 @@ let audioelm = document.querySelector('audio');
 let musiccover = document.getElementById('musiczone');
 let time = new Date()
 
-let curr = Math.floor(time.getHours() / 6);
+let curr = 0;
 
-audioelm.muted = true;
+audioelm.muted = false;
 
 const music = [
     {
