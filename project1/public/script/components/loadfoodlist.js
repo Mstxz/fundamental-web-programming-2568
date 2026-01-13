@@ -29,7 +29,29 @@ function buildMenuItem(menu, template, index) {
             panel.onclick = e => e.stopPropagation();
 
             document.body.appendChild(overlay);
-            console.log(document.querySelector('#method'));
+            console.log();
+
+            let methodelm = document.getElementById('method');
+
+            console.log(menu.method);
+
+            menu.method.forEach((step,i) => {
+                let elm = document.createElement('div');
+                let steps = document.createElement('h1');
+                let infoparam = document.createElement('p');
+
+                elm.className = "p-4";
+
+                steps.className = "text-2xl font-bold"
+                steps.textContent = `Step ${i + 1}`;
+
+                infoparam.textContent = step;
+
+                methodelm.appendChild(elm);
+
+                elm.appendChild(steps);
+                elm.appendChild(infoparam);
+            });
         });
 };
 
