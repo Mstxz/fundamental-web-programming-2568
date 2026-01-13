@@ -17,19 +17,21 @@ function buildMenuItem(menu, template, index) {
         .then(res => res.text())
         .then(data => {
             const overlay = document.createElement('div');
-            overlay.className = 'flex fixed inset-0 bg-black/30 z-50 flex items-center justify-center';
+            overlay.id = "overlay";
+            overlay.className = 'flex fixed inset-0 bg-black/30 z-50 flex items-center justify-center overflow-hidden';
+            overlay.innerHTML = data;
 
-            const panel = document.createElement('div');
-            panel.innerHTML = data;
-            panel.className = 'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg';
+            document.body.appendChild(overlay);
+
+            const panel = document.getElementById('panel');
+            panel.className = 'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg h-8/10';
 
             overlay.appendChild(panel);
 
-            overlay.onclick = () => overlay.remove();
+            overlay.onclick = () => closeOverlay();
             panel.onclick = e => e.stopPropagation();
 
             document.body.appendChild(overlay);
-            console.log();
 
             let methodelm = document.getElementById('method');
 
@@ -52,6 +54,18 @@ function buildMenuItem(menu, template, index) {
                 elm.appendChild(steps);
                 elm.appendChild(infoparam);
             });
+
+            panel.animate(
+                {
+                    opacity: [0,1],
+                    transform: ['translateY(20px)','translateY(0px)']
+                },
+                {
+                    fill: "forwards",
+                    duration: 500,
+                    easing: 'ease-out',
+                }
+            );
         });
 };
 
@@ -89,6 +103,26 @@ async function initMenu() {
         const item = buildMenuItem(menuList[i], template, i);
         container.appendChild(item);
     }
+}
+
+function closeOverlay() {
+    let overlay = document.getElementById('overlay');
+    let panel = document.getElementById('panel');
+
+    panel.animate(
+        {
+            opacity: [0,1],
+            transform: ['translateY(20px)', 'translateY(0)']
+        },
+        {
+            direction: "reverse",
+            duration: 500,
+            easing: 'ease-out'
+        }
+    ).onfinish = () => {
+        overlay.remove();
+    };
+
 }
 
 initMenu();

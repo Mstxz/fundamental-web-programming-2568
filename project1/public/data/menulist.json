@@ -2,6 +2,7 @@
   {
     "id": "paella",
     "name": "Paella",
+    "type": "food",
     "imglinks": "/images/source/paella.jpg",
     "source": "https://tastesbetterfromscratch.com/paella/#wprm-recipe-container-28045",
     "region": "Spain",
@@ -10,6 +11,7 @@
   {
     "id": "stargazypie",
     "name": "Stargazy Pie",
+    "type": "food",
     "imglinks": "/images/source/stargazypie.webp",
     "source": "https://www.bbcgoodfood.com/recipes/stargazy-pie",
     "region": "England",
@@ -23,6 +25,7 @@
   {
     "id": "mapotofu",
     "name": "Mapo Tofu",
+    "type" : "food",
     "imglinks": "/images/source/mapotofu.jpg",
     "source": "https://www.bbcgoodfood.com/recipes/mapo-tofu",
     "region": "China",
