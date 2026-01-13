@@ -76,14 +76,19 @@
   {
     "id": "buddhastemptation",
     "name": "พระกระโดดกำแพง",
+    "desc": "",
+    "type": "food",
     "imglinks": "/images/source/buddhastemptation.jpg",
     "source": "https://foodergolove.wordpress.com/2013/09/23/buddha-jumped-over-the-wall-the-most-ridiculously-complicated-recipe-in-the-world/",
-    "foodsoulimg": "/images/source/buddhastemptation_foodsouls.webp"
+    "foodsoulimg": "/images/source/buddhastemptation_foodsouls.webp",
+    "ingredient": [],
+    "method": []
   },
   {
     "id": "bouillabaisse",
     "name": "บุยยาเบส",
     "desc": "ซุปปลาสไตล์ฝรั่งเศสสูตรนี้ เกิดจากการที่ชาวประมงขายปลา รวมถึงพวกกุ้งหอยต่างๆ ไม่หมด จึงนำมาปรุงเป็นอาหารง่ายๆ รับประทานกันเอง ดังนั้น ในการปรุงบุยยาเบส เราสามารถใช้ซีฟู้ดท้องถิ่นอะไรก็ได้ และส่วนมากจะไม่นิยมใช้ของที่มีราคาแพง ซุปบุยยาเบสนี้ แม้จะเรียกชื่อว่าเป็นซุป แต่สำหรับเหล่าชาวประมง เขาถือว่าซุปนี้คือมื้ออาหารหลักของเขา",
+    "type": "food",
     "imglinks": "/images/source/bouillabaisse.jpg",
     "source": "https://www.pholfoodmafia.com/recipe/bouillabaisse-%E0%B8%9A%E0%B8%B8%E0%B8%A2%E0%B8%A2%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B8%AA/",
     "foodsoulimg": "/images/source/bouillabaisse_foodsouls.webp",
@@ -121,6 +126,7 @@
     "id": "minestrone",
     "name": "ซุปผักอิตาเลี่ยน",
     "desc": "Minestrone หรือซุปผักแบบอิตาเลี่ยน มีประโยชน์ด้วยส่วนประกอบของผักมากมาย ปรับเป็นอาหารจานหลักเพื่อสุขภาพง่ายๆ โดยเพียงใส่เส้นพาสต้าลงไปเยอะๆ",
+    "type": "food",
     "imglinks": "/images/source/minestrone.jpg",
     "source": "https://www.pholfoodmafia.com/recipe/minestrone-%E0%B8%8B%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B8%95%E0%B8%B2%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99/",
     "foodsoulimg": "/images/source/minestrone_foodsouls.webp",
@@ -130,6 +136,8 @@
   {
     "id": "beefwellington",
     "name": "บีฟเวลลิงตัน",
+    "desc": "",
+    "type": "food",
     "imglinks": "/images/source/beefwellington.jpg",
     "source": "",
     "foodsoulimg": "/images/source/beefwellington_foodsouls.webp",
@@ -139,6 +147,8 @@
   {
     "id": "burrito",
     "name": "เบอร์ริโต",
+    "desc": "",
+    "type": "food",
     "imglinks": "/images/source/burrito.jpg",
     "source": "https://cooking.nytimes.com/recipes/1024725-easy-burritos",
     "foodsoulimg": "/images/source/burrito_foodsouls.webp",
@@ -148,6 +158,8 @@
   {
     "id": "foiegras",
     "name": "ฟัวกรา",
+    "desc": "",
+    "type": "food",
     "imglinks": "/images/source/foiegras.jpg",
     "source": "",
     "foodsoulimg": "/images/source/foiegras_foodsouls.webp",
@@ -157,6 +169,52 @@
   {
     "id": "bibimbap",
     "name": "บิบิมบับ",
+    "desc": "",
+    "type": "food",
+    "imglinks": "/images/source/bibimbap.jpg",
+    "source": "",
+    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "cassata",
+    "name": "คาสซาต้า",
+    "desc": "",
+    "type": "dessert",
+    "imglinks": "/images/source/bibimbap.jpg",
+    "source": "",
+    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "canele",
+    "name": "กาเนอเล่",
+    "desc": "",
+    "type": "dessert",
+    "imglinks": "/images/source/bibimbap.jpg",
+    "source": "",
+    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "hishimochi",
+    "name": "ฮิชิโมจิ",
+    "desc": "",
+    "type": "dessert",
+    "imglinks": "/images/source/bibimbap.jpg",
+    "source": "",
+    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "tiramisu",
+    "name": "ทิรามิสุ",
+    "desc": "",
+    "type": "dessert",
     "imglinks": "/images/source/bibimbap.jpg",
     "source": "",
     "foodsoulimg": "/images/source/bibimbap_foodsouls.webp",
