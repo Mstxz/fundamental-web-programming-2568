@@ -1,39 +1,38 @@
-<div id="panel">
-    <button id="closebutton" onclick="closeOverlay()" class="cursor-pointer absolute right-4 top-4"><i class="fa-solid fa-xmark text-4xl"></i></button>
+<button id="closebutton" onclick="closeOverlay()" class="cursor-pointer fixed right-4 top-4">
+    <i class="fa-solid fa-xmark text-7xl text-white"></i>
+</button>
 
+<div id="panel" class="flex flex-col">
+    <!-- Top content -->
     <section class="flex flex-col sm:flex-row justify-evenly [&>div]:w-fit sm:[&>div]:w-1/2">
-        <div class="p-10 bg-ci-green-2 text-white m-5 border-ci-brown-1 border-20 shadow-inner shadow-ci-green-3">
-            <img src="images/source/stargazypie.webp" class="w-full">
+        <div id="description" class="p-10 bg-ci-green-2 text-white m-5 border-ci-brown-1 border-20 shadow-inner shadow-ci-green-3">
+            <img src="images/source/mapotofu.jpg" class="w-75 h-75 object-center object-cover">
             <div class="flex gap-4 flex-col">
-                <h1 class="text-2xl font-bold">Stargazy Pie</h1>
-                <a target="_blank" href="https://www.bbcgoodfood.com/recipes/stargazy-pie" class="bg-ci-red-1 text-white px-4 py-2 rounded-xl w-30 flex justify-center gap-2 items-center">Source <i    class="fa-solid fa-book text-xl"></i></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h1 class="text-2xl font-bold"></h1>
+                <a target="_blank" href="#" class="bg-ci-red-1 text-white px-4 py-2 rounded-xl w-40 flex justify-center gap-2 items-center">
+                    แหล่งข้อมูล <i class="fa-solid fa-book text-xl"></i>
+                </a>
+                <p></p>
             </div>
         </div>
+
         <div class="p-10">
-            <h1 class="text-3xl">Ingredients</h1>
-            <ul class="list-disc marker:mr-2 marker:scale-40 text-lg">
-                <li>ไข่</li>
-                <li>เส้นหญ้าฝรั่น</li>
-                <li>นมสดเต็มมันเนย</li>
-                <li>เนย</li>
-                <li>ต้นกระเทียมฝรั่ง (Leek)</li>
-                <li>เบคอนรมควันแบบติดมัน</li>
-                <li>มันฝรั่งเนื้อแป้ง</li>
-                <li>แป้งสาลีอเนกประสงค์</li>
-                <li>วิปปิ้งครีมชนิดไขมันสูง</li>
-                <li>กุยช่ายฝรั่ง (Chives)</li>
-                <li>ปลาซาร์ดีน</li>
-                <li>แป้งพัฟเพสตรี้</li>
-            </ul>
+            <h1 class="text-3xl">วัตถุดิบ</h1>
+            <ul id="ingredients" class="list-disc marker:mr-2 marker:scale-40 text-lg"></ul>
         </div>
     </section>
 
-    <section id="method" class="px-10" >
-        <h1 class="text-3xl">How to Make</h1>
+    <!-- SCROLL CONTAINER -->
+    <section id="method-wrapper" class="flex-1 overflow-y-auto">
+        <section id="method" class="px-10">
+            <h1 class="text-3xl">วิธีการทำ</h1>
+        </section>
     </section>
 
-    <section class="flex justify-around items-center h-30 bg-ci-beige-2 [&>a]:text-white [&>a]:bg-ci-red-1 [&>a]:p-2 [&>a]:rounded-lg [&>a]:w-25 [&>a]:flex [&>a]:justify-evenly [&>a]:items-center">
-
+    <!-- Footer -->
+    <section class="flex justify-around items-center h-30 bg-ci-beige-2
+        [&>a]:text-white [&>a]:bg-ci-red-1 [&>a]:p-2 [&>a]:rounded-lg
+        [&>a]:w-25 [&>a]:flex [&>a]:justify-evenly [&>a]:items-center">
     </section>
+
 </div>

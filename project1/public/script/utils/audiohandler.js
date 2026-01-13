@@ -4,7 +4,7 @@ let time = new Date()
 
 let curr = 0;
 
-audioelm.muted = false;
+audioelm.muted = true;
 
 const music = [
     {
