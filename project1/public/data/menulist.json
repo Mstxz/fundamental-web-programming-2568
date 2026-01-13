@@ -1,12 +1,14 @@
 [
   {
     "id": "paella",
-    "name": "Paella",
+    "name": "ปาเอลย่า",
+    "desc": "ข้าวผัดสเปนโดยทั่วไป จะปรุงบนกระทะลักษณะแบน ผัดไปเรื่อยๆ จนแห้งและน้ำซุปซึมเข้าไปในตัวข้าว ข้าวผัดสเปนสูตรนี้เป็นสูตรประยุกต์ให้เข้ากับครัวของบ้านเรา ใช้อุปกรณ์เครื่องมือในครัวมาปรุงให้เป็นข้าวผัดสเปนที่มีส่วนประกอบของเครื่องทะเล รสชาติอร่อยไม่น้อยหน้าใคร",
     "type": "food",
     "imglinks": "/images/source/paella.jpg",
-    "source": "https://tastesbetterfromscratch.com/paella/#wprm-recipe-container-28045",
-    "region": "Spain",
-    "foodsoulimg": "/images/source/paella_foodsouls.webp"
+    "source": "https://www.pholfoodmafia.com/recipe/seafood-paella-%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%9C%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%99/",
+    "foodsoulimg": "/images/source/paella_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
   },
   {
     "id": "stargazypie",
@@ -15,7 +17,6 @@
     "type": "food",
     "imglinks": "/images/source/stargazypie.webp",
     "source": "https://www.bbcgoodfood.com/recipes/stargazy-pie",
-    "region": "England",
     "foodsoulimg": "/images/source/stargazypie_foodsouls.webp",
     "ingredient": [
       "ไข่",
@@ -44,7 +45,6 @@
     "type" : "food",
     "imglinks": "/images/source/mapotofu.jpg",
     "source": "https://www.pholfoodmafia.com/recipe/mapo-tofu-%E0%B8%A1%E0%B8%B2%E0%B9%82%E0%B8%9B%E0%B9%82%E0%B8%97%E0%B8%9F%E0%B8%B9/",
-    "region": "China",
     "foodsoulimg": "/images/source/mapotofu_foodsouls.webp",
     "ingredient":[
       "เต้าหู้คินุ",
@@ -78,7 +78,6 @@
     "name": "พระกระโดดกำแพง",
     "imglinks": "/images/source/buddhastemptation.jpg",
     "source": "https://foodergolove.wordpress.com/2013/09/23/buddha-jumped-over-the-wall-the-most-ridiculously-complicated-recipe-in-the-world/",
-    "region": "China",
     "foodsoulimg": "/images/source/buddhastemptation_foodsouls.webp"
   },
   {
@@ -87,7 +86,6 @@
     "desc": "ซุปปลาสไตล์ฝรั่งเศสสูตรนี้ เกิดจากการที่ชาวประมงขายปลา รวมถึงพวกกุ้งหอยต่างๆ ไม่หมด จึงนำมาปรุงเป็นอาหารง่ายๆ รับประทานกันเอง ดังนั้น ในการปรุงบุยยาเบส เราสามารถใช้ซีฟู้ดท้องถิ่นอะไรก็ได้ และส่วนมากจะไม่นิยมใช้ของที่มีราคาแพง ซุปบุยยาเบสนี้ แม้จะเรียกชื่อว่าเป็นซุป แต่สำหรับเหล่าชาวประมง เขาถือว่าซุปนี้คือมื้ออาหารหลักของเขา",
     "imglinks": "/images/source/bouillabaisse.jpg",
     "source": "https://www.pholfoodmafia.com/recipe/bouillabaisse-%E0%B8%9A%E0%B8%B8%E0%B8%A2%E0%B8%A2%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B8%AA/",
-    "region": "France",
     "foodsoulimg": "/images/source/bouillabaisse_foodsouls.webp",
     "ingredient": [
       "น้ำมันรำข้าว",
@@ -121,42 +119,48 @@
   },
   {
     "id": "minestrone",
-    "name": "Minestrone Soup",
+    "name": "ซุปผักอิตาเลี่ยน",
+    "desc": "Minestrone หรือซุปผักแบบอิตาเลี่ยน มีประโยชน์ด้วยส่วนประกอบของผักมากมาย ปรับเป็นอาหารจานหลักเพื่อสุขภาพง่ายๆ โดยเพียงใส่เส้นพาสต้าลงไปเยอะๆ",
     "imglinks": "/images/source/minestrone.jpg",
-    "source": "",
-    "region": "Italy",
-    "foodsoulimg": "/images/source/minestrone_foodsouls.webp"
+    "source": "https://www.pholfoodmafia.com/recipe/minestrone-%E0%B8%8B%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B8%95%E0%B8%B2%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99/",
+    "foodsoulimg": "/images/source/minestrone_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
   },
   {
     "id": "beefwellington",
     "name": "บีฟเวลลิงตัน",
     "imglinks": "/images/source/beefwellington.jpg",
     "source": "",
-    "region": "England",
-    "foodsoulimg": "/images/source/beefwellington_foodsouls.webp"
+    "foodsoulimg": "/images/source/beefwellington_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
   },
   {
     "id": "burrito",
     "name": "เบอร์ริโต",
     "imglinks": "/images/source/burrito.jpg",
     "source": "https://cooking.nytimes.com/recipes/1024725-easy-burritos",
-    "region": "Mexico",
-    "foodsoulimg": "/images/source/burrito_foodsouls.webp"
+    "foodsoulimg": "/images/source/burrito_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
   },
   {
     "id": "foiegras",
     "name": "ฟัวกรา",
     "imglinks": "/images/source/foiegras.jpg",
     "source": "",
-    "region": "France",
-    "foodsoulimg": "/images/source/foiegras_foodsouls.webp"
+    "foodsoulimg": "/images/source/foiegras_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
   },
   {
     "id": "bibimbap",
     "name": "บิบิมบับ",
     "imglinks": "/images/source/bibimbap.jpg",
     "source": "",
-    "region": "Korea",
-    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp"
+    "foodsoulimg": "/images/source/bibimbap_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
   }
 ]
