@@ -9,10 +9,30 @@ async function loadFoodTemplate() {
 }
 
 function buildMenuItem(menu, template, index) {
-    const menuelm = document.createElement('a');
+    const menuelm = document.createElement('button');
 
     menuelm.className = `flex flex-row items-center border-b-8 border-r-4 border-t border-l rounded-tl-3xl rounded-br-lg border-red-800 p-5 cursor-pointer opacity-0 w-[500px] md:w-[350px] sm:w-[500px] bg-ci-beige-1 text-black text-xl text-center hover:scale-110 transition-transform ease-in-out duration-100`;
-    menuelm.href = `/${menu.id}.html`
+    menuelm.onclick = () => {
+    fetch('components/information.html')
+        .then(res => res.text())
+        .then(data => {
+            const overlay = document.createElement('div');
+            overlay.className = 'flex fixed inset-0 bg-black/30 z-50 flex items-center justify-center';
+
+            const panel = document.createElement('div');
+            panel.innerHTML = data;
+            panel.className = 'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg';
+
+            overlay.appendChild(panel);
+
+            overlay.onclick = () => overlay.remove();
+            panel.onclick = e => e.stopPropagation();
+
+            document.body.appendChild(overlay);
+            console.log(document.querySelector('#method'));
+        });
+};
+
     menuelm.innerHTML = template;
 
     menuelm.querySelector('#foodimg').src =  menu.imglinks;
