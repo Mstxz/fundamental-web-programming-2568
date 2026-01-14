@@ -77,27 +77,47 @@ function buildMenuItem(menu, template, index) {
     menuelm.querySelector('#foodsouls').src =  menu.foodsoulimg;
 
     const foodtype = menuelm.querySelector('#type');
-    const foodicon = document.createElement('i');
+    foodtype.innerHTML = ''; // reset container
 
-    let typeth = "อาหาร";
+    const typeWrapper = document.createElement('div');
 
-    if(menu.type == "food"){
-        foodtype.classList.add('bg-food');
-        foodicon.className = 'fa-solid fa-burger';
-        typeth = "อาหาร";
-    }
-    else if(menu.type == "dessert"){
-        foodtype.classList.add('bg-dessert');
-        foodicon.className = 'fa-solid fa-ice-cream';
-        typeth = "ขนมหวาน";
-    }
-    else if(menu.type == "drinks"){
-        foodtype.classList.add('bg-drinks');
-        foodicon.className = 'fa-solid fa-martini-glass'
-        typeth = "เครื่องดื่ม";
-    }
-    foodtype.appendChild(foodicon);
-    foodtype.appendChild(document.createTextNode(` ${typeth}`));
+    const typeMap = {
+        food: {
+            cname: 'bg-food',
+            icon: 'fa-burger',
+            text: 'อาหาร'
+        },
+        dessert: {
+            cname: 'bg-dessert',
+            icon: 'fa-ice-cream',
+            text: 'ขนมหวาน'
+        },
+        drinks: {
+            cname: 'bg-drinks',
+            icon: 'fa-martini-glass',
+            text: 'เครื่องดื่ม'
+        }
+    };
+
+menu.type.forEach(t => {
+    const cfg = typeMap[t];
+    if (!cfg) return;
+
+    const badge = document.createElement('div');
+    badge.className = `flex text-sm items-center gap-1 px-2 py-1 w-25 rounded ${cfg.cname}`;
+
+    const icon = document.createElement('i');
+    icon.className = `fa-solid ${cfg.icon}`;
+
+    const text = document.createElement('span');
+    text.textContent = cfg.text;
+
+    badge.appendChild(icon);
+    badge.appendChild(text);
+    typeWrapper.appendChild(badge);
+});
+
+foodtype.appendChild(typeWrapper);
 
 
     menuelm.querySelector('h1').textContent = menu.name;
@@ -159,7 +179,7 @@ function reloadList() {
     container.innerHTML = '';
 
     menuList
-        .filter(menu => value === 'all' || menu.type === value)
+        .filter(menu => value === 'all' || menu.type.includes(value))
         .forEach((menu, i) => {
             container.appendChild(buildMenuItem(menu, template, i));
         });
