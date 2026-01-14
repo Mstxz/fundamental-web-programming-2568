@@ -11,7 +11,7 @@ async function loadFoodTemplate() {
 function buildMenuItem(menu, template, index) {
     const menuelm = document.createElement('button');
 
-    menuelm.className = `flex flex-row items-center border-b-8 border-r-4 border-t border-l rounded-tl-3xl rounded-br-lg border-red-800 p-5 cursor-pointer opacity-0 w-[350px] bg-linear-to-b from-ci-beige-1 to-ci-red-1 text-black text-xl text-center hover:scale-110 transition-transform ease-in-out duration-100 gap-4 text-white``;
+    menuelm.className = `flex flex-row items-center border-b-8 border-r-4 border-t border-l rounded-tl-3xl rounded-br-lg border-red-800 p-5 cursor-pointer opacity-0 w-[350px] bg-linear-to-b from-ci-beige-1 to-ci-red-1 text-black text-xl text-center hover:scale-110 transition-transform ease-in-out duration-100 gap-4 text-white`;
     menuelm.onclick = () => {
 
     /* ---------- Overlay ---------- */
