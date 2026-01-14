@@ -94,18 +94,19 @@ function buildMenuItem(menu, template, index) {
 }
 
 async function initMenu() {
-    const [menuList, template] = await Promise.all([
+    [menuList, template] = await Promise.all([
         loadMenuData(),
         loadFoodTemplate()
     ]);
 
-    const container = document.getElementById('menulist');
+    container = document.getElementById('menulist');
+    container.innerHTML = '';
 
-    for (let i = 0; i < menuList.length; i++) {
-        const item = buildMenuItem(menuList[i], template, i);
-        container.appendChild(item);
-    }
+    menuList.forEach((menu, i) => {
+        container.appendChild(buildMenuItem(menu, template, i));
+    });
 }
+
 
 function closeOverlay() {
     let overlay = document.getElementById('overlay');
@@ -124,7 +125,19 @@ function closeOverlay() {
     ).onfinish = () => {
         overlay.remove();
     };
+}
 
+function reloadList() {
+    const select = document.getElementById('filterprompt');
+    const value = select.value;
+
+    container.innerHTML = '';
+
+    menuList
+        .filter(menu => value === 'all' || menu.type === value)
+        .forEach((menu, i) => {
+            container.appendChild(buildMenuItem(menu, template, i));
+        });
 }
 
 initMenu();
