@@ -30,8 +30,14 @@
             <section class="flex flex-col h-30 mt-25">
                 <h1 id="greeting" class="text-3xl"></h1>
                 <div id="clock"></div>
-                <div id="filter">
-                    (filter will be right here)
+                <div id="filter" class="flex justify-evenly items-center w-full">
+                    <select name="Filter" id="filter" class="bg-ci-beige-1 text-xl w-100">
+                        <option value="all">ทั้งหมด</option>
+                        <option value="food">อาหาร</option>
+                        <option value="dessert">ขนมหวาน</option>
+                        <option value="drinks">เครื่องดื่ม</option>
+                    </select>
+                    <button type="button" onclick="reloadList()" class="bg-ci-red-1 text-white px-4 py-2 rounded-lg flex justify-center items-center gap-2">Filter<i class="fa-solid fa-filter"></i></button>
                 </div>
             </section>
             <section class="flex-col mt-20">

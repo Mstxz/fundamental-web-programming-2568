@@ -250,7 +250,6 @@
       "เมื่อพร้อมจะอบบีฟเวลลิงตัน ให้กรีดผิวแป้งเบา ๆ และทาไข่อีกครั้ง จากนั้นนำเข้าอบที่อุณหภูมิ 200°C / แก๊สเบอร์ 6 เป็นเวลา 15–20 นาที จนแป้งเป็นสีทองและสุก พักไว้ 10 นาทีก่อนหั่น",
       "ระหว่างนั้น อุ่นซอสอีกครั้ง เสิร์ฟบีฟเวลลิงตันหั่นเป็นชิ้น พร้อมซอสเป็นเครื่องเคียง"
     ]
-
   },
   {
     "id": "burrito",
@@ -260,7 +259,19 @@
     "imglinks": "/images/source/burrito.jpg",
     "source": "https://cooking.nytimes.com/recipes/1024725-easy-burritos",
     "foodsoulimg": "/images/source/burrito_foodsouls.webp",
-    "ingredient":[],
+    "ingredient":[
+      "เนื้อวัวบด",
+      "หัวหอมใหญ่สีเหลืองหรือสีขาว สับละเอียด",
+      "ผงยี่หร่า",
+      "ปาปริก้ารมควัน หรือผงพริกชิโปเล่ หรือผงพริกอันโช",
+      "ออริกาโนแห้ง",
+      "ถั่วดำหรือถั่วพินโตกระป๋อง",
+      "มะเขือเทศลูกใหญ่ หั่นหยาบ",
+      "น้ำมะนาว หรือ น้ำส้มสายชูแอปเปิลไซเดอร์",
+      "ซอสพริก สำหรับราด (ไม่จำเป็น)",
+      "แผ่นแป้งตอร์ติญ่าแป้งสาลีสำหรับเบอร์ริโต",
+      "ชีสมอนเทอเรย์แจ็คขูด หรือชีสผสมสไตล์เม็กซิกัน"
+    ],
     "method":[]
   },
   {
@@ -337,6 +348,39 @@
     "imglinks": "/images/source/affogato.jpg",
     "source": "",
     "foodsoulimg": "/images/source/affogato_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "cannoli",
+    "name": "คันโนลี",
+    "desc": "ของหวานของอิตาลีที่มีต้นกำเนิดในซิซิลี ชื่อแคนโนลี มีความหมายถึง ท่อเล็กๆ (little tube) สอดไส้ด้วยชีสรีคอตต้า และตกแต่งด้วยช็อกโกแลตชิพ",
+    "type": "dessert",
+    "imglinks": "/images/source/cannoli.jpg",
+    "source": "https://www.pholfoodmafia.com/recipe/cannoli-%E0%B9%81%E0%B8%84%E0%B8%99%E0%B9%82%E0%B8%99%E0%B8%A5%E0%B8%B5/",
+    "foodsoulimg": "/images/source/cannoli_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "lamington",
+    "name": "เค้กลามิงตัน",
+    "desc": "",
+    "type": "dessert",
+    "imglinks": "/images/source/lamington.jpg",
+    "source": "https://www.pholfoodmafia.com/recipe/lamington-%E0%B9%80%E0%B8%84%E0%B9%89%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%99/",
+    "foodsoulimg": "/images/source/lamington_foodsouls.webp",
+    "ingredient":[],
+    "method":[]
+  },
+  {
+    "id": "eggnog",
+    "name": "เอ๊กน็อก",
+    "desc": "",
+    "type": "drink",
+    "imglinks": "/images/source/eggnog.jpg",
+    "source": "",
+    "foodsoulimg": "/images/source/eggnog_foodsouls.webp",
     "ingredient":[],
     "method":[]
   }
