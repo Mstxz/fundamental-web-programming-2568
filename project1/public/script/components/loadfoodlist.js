@@ -75,6 +75,31 @@ function buildMenuItem(menu, template, index) {
 
     menuelm.querySelector('#foodimg').src =  menu.imglinks;
     menuelm.querySelector('#foodsouls').src =  menu.foodsoulimg;
+
+    const foodtype = menuelm.querySelector('#type');
+    const foodicon = document.createElement('i');
+
+    let typeth = "อาหาร";
+
+    if(menu.type == "food"){
+        foodtype.classList.add('bg-food');
+        foodicon.className = 'fa-solid fa-burger';
+        typeth = "อาหาร";
+    }
+    else if(menu.type == "dessert"){
+        foodtype.classList.add('bg-dessert');
+        foodicon.className = 'fa-solid fa-ice-cream';
+        typeth = "ขนมหวาน";
+    }
+    else if(menu.type == "drinks"){
+        foodtype.classList.add('bg-drinks');
+        foodicon.className = 'fa-solid fa-martini-glass'
+        typeth = "เครื่องดื่ม";
+    }
+    foodtype.appendChild(foodicon);
+    foodtype.appendChild(document.createTextNode(` ${typeth}`));
+
+
     menuelm.querySelector('h1').textContent = menu.name;
 
     menuelm.animate(
