@@ -1,5 +1,5 @@
 <select id="filtertype" class="bg-ci-beige-1 text-xl w-100 py-2 px-4 rounded-lg text-ci-brown-2">
-    <option value="">เลือกประเภท</option>
+    <option value="" selected disabled>เลือกประเภท</option>
     <option value="all">ทั้งหมด</option>
     <option value="food">อาหาร</option>
     <option value="dessert">ขนมหวาน</option>
@@ -7,16 +7,18 @@
 </select>
 
 <select id="filterregion" class="bg-ci-beige-1 text-xl w-100 py-2 px-4 rounded-lg text-ci-brown-2">
-    <option value="">เลือกประเทศ</option>
+    <option value="" selected disabled>เลือกประเทศ</option>
     <option value="all">ทั้งหมด</option>
 </select>
 
-<select id="filterrpgclass" class="bg-ci-beige-1 text-xl w-100 py-2 px-4 rounded-lg text-ci-brown-2">
-    <option value="">เลือกประเภทภูติอาหาร</option>
-    <option value="all">ทั้งหมด</option>
-    <option value="attack">โจมตี</option>
-    <option value="defense">ป้องกัน</option>
-    <option value="support">สนับสนุน</option>
-    <option value="mage">เวทมนตร์</option>
-</select>
+<div id="ffopt">
+    <select id="filterrpgclass" class="bg-ci-beige-1 text-xl w-100 py-2 px-4 rounded-lg text-ci-brown-2">
+        <option value="" selected disabled>เลือกประเภทภูติอาหาร</option>
+        <option value="all">ทั้งหมด</option>
+        <option value="attack">โจมตี</option>
+        <option value="defense">ป้องกัน</option>
+        <option value="support">สนับสนุน</option>
+        <option value="mage">เวทมนตร์</option>
+    </select>
+</div>
 <button type="button" onclick="reloadList()" class="bg-ci-red-1 text-white px-4 py-2 rounded-lg flex justify-center items-center gap-2">Filter<i class="fa-solid fa-filter"></i></button>

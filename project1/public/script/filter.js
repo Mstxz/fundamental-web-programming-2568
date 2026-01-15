@@ -37,11 +37,13 @@ async function reloadList() {
     const typeSelect = document.getElementById('filtertype');
     const regionSelect = document.getElementById('filterregion');
     const classSelect = document.getElementById('filterrpgclass');
+    const ffToggle = document.getElementById('ffmode');
 
     const filters = {
         type: typeSelect?.value || '',
         region: regionSelect?.value || '',
-        rpgClass: classSelect?.value || ''
+        rpgClass: ffToggle?.checked ? (classSelect?.value || '') : ''
+        // ↑ ignore RPG class when unchecked
     };
 
     const menuList = window.menuState?.menuList;
@@ -60,6 +62,5 @@ async function reloadList() {
 
     window.menuState.renderMenuList(filteredMenus);
 }
-
 
 window.reloadList = reloadList;
