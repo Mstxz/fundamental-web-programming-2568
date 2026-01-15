@@ -62,10 +62,26 @@ function buildMenuItem(menu, template, index) {
 
                 /* ---- description ---- */
                 const desc = document.getElementById('description');
-                desc.querySelector('img').src = menu.imglinks;
+                let images = desc.querySelectorAll('img');
+                images[0].src = menu.imglinks;
+                images[1].src = `images/icon/foodsouls/${menu.id}.webp`;
                 desc.querySelector('h1').textContent = menu.name;
                 desc.querySelector('a').href = menu.source;
                 desc.querySelector('p').textContent = menu.desc;
+
+                /* ---- Food Fantasy Mode ---- */
+                let foodfantasy = document.getElementById('ff');
+                let fftoggle = document.getElementById('ffmode');
+
+                console.log(fftoggle, foodfantasy);
+
+                if (!fftoggle.checked){
+                    foodfantasy.style.display = 'none';
+                }
+                else {
+                    foodfantasy.style.display = "block";
+                }
+
 
                 /* ---- ingredients ---- */
                 const ingredientelm = document.getElementById('ingredients');
