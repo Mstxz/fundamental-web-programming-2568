@@ -17,6 +17,7 @@
 
         <!-- For just only index.html -->
         <script src="script/components/loadfoodlist.js" defer></script>
+        <script src="script/components/loadfilter.js" defer></script>
 
     </head>
     <body>
@@ -31,18 +32,12 @@
                 <h1 id="greeting" class="text-3xl"></h1>
                 <div id="clock"></div>
                 <div id="filter" class="flex justify-center items-center gap-5 w-full">
-                    <select name="Filter" id="filterprompt" class="bg-ci-beige-1 text-xl w-100 py-2 px-4 rounded-lg">
-                        <option value="all"> ทั้งหมด</option>
-                        <option value="food">อาหาร</option>
-                        <option value="dessert">ขนมหวาน</option>
-                        <option value="drinks">เครื่องดื่ม</option>
-                    </select>
-                    <button type="button" onclick="reloadList()" class="bg-ci-red-1 text-white px-4 py-2 rounded-lg flex justify-center items-center gap-2">Filter<i class="fa-solid fa-filter"></i></button>
+
                 </div>
             </section>
             <section class="flex-col mt-20">
                 <h1 class="text-3xl">Select Menu</h1>
-                <div id="menulist" class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 gap-10 px-20 py-10">
+                <div id="menulist" class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 px-20 py-10">
 
                 </div>
             </section>
@@ -55,5 +50,6 @@
 
         <script src="script/menu.js"></script>
         <script src="script/greeting.js"></script>
+        <script src="script/filter.js"></script>
     </body>
 </html>

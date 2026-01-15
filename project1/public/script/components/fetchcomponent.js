@@ -12,3 +12,8 @@ fetch('components/menu.html').then(res => res.text()).then(data => {
     mainmenu.innerHTML = data;
 
 });
+
+fetch('components/filteroption.html').then(res => res.text()).then(data => {
+    let filter = document.getElementById('filter');
+    filter.innerHTML = data;
+})

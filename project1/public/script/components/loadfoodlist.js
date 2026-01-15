@@ -8,127 +8,145 @@ async function loadFoodTemplate() {
     return await res.text();
 }
 
+let menuList = [];
+let template = '';
+let container = null;
+
+function closeOverlay() {
+    const overlay = document.getElementById('overlay');
+    const panel = document.getElementById('panel');
+
+    if (!overlay || !panel) return;
+
+    panel.animate(
+        {
+            opacity: [1, 0],
+            transform: ['translateY(0)', 'translateY(20px)']
+        },
+        {
+            duration: 400,
+            easing: 'ease-in'
+        }
+    ).onfinish = () => overlay.remove();
+}
+
+window.closeOverlay = closeOverlay;
+
 function buildMenuItem(menu, template, index) {
     const menuelm = document.createElement('button');
 
-    menuelm.className = `flex flex-row items-center border-b-8 border-r-4 border-t border-l rounded-tl-3xl rounded-br-lg border-red-800 p-5 cursor-pointer opacity-0 w-[350px] bg-linear-to-b from-ci-beige-1 to-ci-red-1 text-black text-xl text-center hover:scale-110 transition-transform ease-in-out duration-100 gap-4 text-white`;
+    menuelm.className =
+        'flex flex-row items-center border-b-8 border-r-4 border-t border-l ' +
+        'rounded-tl-3xl rounded-br-lg border-red-800 p-5 cursor-pointer ' +
+        'opacity-0 w-[350px] bg-linear-to-b from-ci-beige-1 to-ci-red-1 ' +
+        'text-xl text-center hover:scale-110 transition-transform ' +
+        'ease-in-out duration-100 gap-4 text-white';
+
     menuelm.onclick = () => {
+        fetch('components/information.html')
+            .then(res => res.text())
+            .then(data => {
+                const overlay = document.createElement('div');
+                overlay.id = 'overlay';
+                overlay.className =
+                    'flex fixed inset-0 bg-black/30 z-50 items-center justify-center';
+                overlay.innerHTML = data;
+                overlay.onclick = closeOverlay;
+                document.body.appendChild(overlay);
 
-    /* ---------- Overlay ---------- */
-    fetch('components/information.html').then(res => res.text()).then(data => {
-        const overlay = document.createElement('div');
-        overlay.id = "overlay";
-        overlay.className = 'flex fixed inset-0 bg-black/30 z-50 flex items-center justify-center overflow-hidden';
-        overlay.innerHTML = data;
-        document.body.appendChild(overlay);
+                const panel = overlay.querySelector('#panel');
+                panel.className =
+                    'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg h-[80vh] ' +
+                    'overflow-y-auto relative';
+                panel.onclick = e => e.stopPropagation();
 
-        const panel = overlay.querySelector('#panel');
-        panel.className = 'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg h-[80vh] overflow-y-auto relative';
+                /* ---- description ---- */
+                const desc = document.getElementById('description');
+                desc.querySelector('img').src = menu.imglinks;
+                desc.querySelector('h1').textContent = menu.name;
+                desc.querySelector('a').href = menu.source;
+                desc.querySelector('p').textContent = menu.desc;
 
-        panel.onclick = e => e.stopPropagation();
+                /* ---- ingredients ---- */
+                const ingredientelm = document.getElementById('ingredients');
+                ingredientelm.innerHTML = '';
+                menu.ingredient.forEach(a => {
+                    const li = document.createElement('li');
+                    li.textContent = a;
+                    ingredientelm.appendChild(li);
+                });
 
-        //information
-        document.getElementById('description').querySelector('img').src = menu.imglinks;
-        document.getElementById('description').querySelector('h1').textContent = menu.name;
-        document.getElementById('description').querySelector('a').href = menu.source;
-        document.getElementById('description').querySelector('p').textContent = menu.desc;
+                /* ---- method ---- */
+                const methodelm = document.getElementById('method');
+                methodelm.innerHTML = '';
+                menu.method.forEach((step, i) => {
+                    const elm = document.createElement('div');
+                    const h = document.createElement('h1');
+                    const p = document.createElement('p');
 
-        //ingredients
-        const ingredientelm = document.getElementById('ingredients');
-        menu.ingredient.forEach(a => {
-            let ingredientlist = document.createElement('li');
-            ingredientlist.textContent = a;
-            ingredientelm.appendChild(ingredientlist);
-        });
+                    elm.className = 'p-4';
+                    h.className = 'text-2xl font-bold';
+                    h.textContent = `ขั้นตอนที่ ${i + 1}`;
+                    p.textContent = step;
 
-        //method - how to make
-        const methodelm = document.getElementById('method');
+                    elm.append(h, p);
+                    methodelm.appendChild(elm);
+                });
 
-        menu.method.forEach((step,i) => {
-            let elm = document.createElement('div');
-            let steps = document.createElement('h1');
-            let infoparam = document.createElement('p');
-            elm.className = "p-4";
-            steps.className = "text-2xl font-bold"
-            steps.textContent = `ขั้นตอนที่ ${i + 1}`;
-            infoparam.textContent = step;
-            methodelm.appendChild(elm);
-            elm.appendChild(steps);
-            elm.appendChild(infoparam);
-        });
-
-        panel.animate(
-            {
-                opacity: [0,1],
-                transform: ['translateY(20px)','translateY(0px)']
-            },
-            {
-                fill: "forwards",
-                duration: 500,
-                easing: 'ease-out',
-            }
-        );
-    });
-};
+                panel.animate(
+                    {
+                        opacity: [0, 1],
+                        transform: ['translateY(20px)', 'translateY(0)']
+                    },
+                    {
+                        fill: 'forwards',
+                        duration: 500,
+                        easing: 'ease-out'
+                    }
+                );
+            });
+    };
 
     menuelm.innerHTML = template;
 
-    menuelm.querySelector('#foodimg').src =  menu.imglinks;
-    menuelm.querySelector('#foodsouls').src =  menu.foodsoulimg;
+    menuelm.querySelector('#foodimg').src = menu.imglinks;
+    menuelm.querySelector('#foodsouls').src = menu.foodsoulimg;
+    menuelm.querySelector('h1').textContent = menu.name;
 
+    /* ---- type badges ---- */
     const foodtype = menuelm.querySelector('#type');
-    foodtype.innerHTML = ''; // reset container
-
-    const typeWrapper = document.createElement('div');
+    foodtype.innerHTML = '';
 
     const typeMap = {
-        food: {
-            cname: 'bg-food',
-            icon: 'fa-burger',
-            text: 'อาหาร'
-        },
-        dessert: {
-            cname: 'bg-dessert',
-            icon: 'fa-ice-cream',
-            text: 'ขนมหวาน'
-        },
-        drinks: {
-            cname: 'bg-drinks',
-            icon: 'fa-martini-glass',
-            text: 'เครื่องดื่ม'
-        }
+        food: { cname: 'bg-food', icon: 'fa-burger', text: 'อาหาร' },
+        dessert: { cname: 'bg-dessert', icon: 'fa-ice-cream', text: 'ขนมหวาน' },
+        drinks: { cname: 'bg-drinks', icon: 'fa-martini-glass', text: 'เครื่องดื่ม' }
     };
 
-menu.type.forEach(t => {
-    const cfg = typeMap[t];
-    if (!cfg) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'flex gap-2';
 
-    const badge = document.createElement('div');
-    badge.className = `flex text-sm items-center gap-1 px-2 py-1 w-25 rounded ${cfg.cname}`;
+    menu.type.forEach(t => {
+        const cfg = typeMap[t];
+        if (!cfg) return;
 
-    const icon = document.createElement('i');
-    icon.className = `fa-solid ${cfg.icon}`;
+        const badge = document.createElement('div');
+        badge.className =
+            `flex text-sm items-center gap-1 px-2 py-1 rounded ${cfg.cname}`;
+        badge.innerHTML =
+            `<i class="fa-solid ${cfg.icon}"></i><span>${cfg.text}</span>`;
+        wrapper.appendChild(badge);
+    });
 
-    const text = document.createElement('span');
-    text.textContent = cfg.text;
-
-    badge.appendChild(icon);
-    badge.appendChild(text);
-    typeWrapper.appendChild(badge);
-});
-
-foodtype.appendChild(typeWrapper);
-
-
-    menuelm.querySelector('h1').textContent = menu.name;
+    foodtype.appendChild(wrapper);
 
     menuelm.animate(
         {
             opacity: [0, 1],
-            transform: ['translateY(20px)', 'translateY(0px)']
+            transform: ['translateY(20px)', 'translateY(0)']
         },
         {
-            fill: "forwards",
+            fill: 'forwards',
             duration: 500,
             delay: index * 100,
             easing: 'ease-out'
@@ -138,6 +156,13 @@ foodtype.appendChild(typeWrapper);
     return menuelm;
 }
 
+function renderMenuList(menus) {
+    container.innerHTML = '';
+    menus.forEach((menu, i) => {
+        container.appendChild(buildMenuItem(menu, template, i));
+    });
+}
+
 async function initMenu() {
     [menuList, template] = await Promise.all([
         loadMenuData(),
@@ -145,44 +170,14 @@ async function initMenu() {
     ]);
 
     container = document.getElementById('menulist');
-    container.innerHTML = '';
-
-    menuList.forEach((menu, i) => {
-        container.appendChild(buildMenuItem(menu, template, i));
-    });
-}
-
-
-function closeOverlay() {
-    let overlay = document.getElementById('overlay');
-    let panel = document.getElementById('panel');
-
-    panel.animate(
-        {
-            opacity: [0,1],
-            transform: ['translateY(20px)', 'translateY(0)']
-        },
-        {
-            direction: "reverse",
-            duration: 500,
-            easing: 'ease-out'
-        }
-    ).onfinish = () => {
-        overlay.remove();
-    };
-}
-
-function reloadList() {
-    const select = document.getElementById('filterprompt');
-    const value = select.value;
-
-    container.innerHTML = '';
-
-    menuList
-        .filter(menu => value === 'all' || menu.type.includes(value))
-        .forEach((menu, i) => {
-            container.appendChild(buildMenuItem(menu, template, i));
-        });
+    renderMenuList(menuList);
 }
 
 initMenu();
+
+window.menuState = {
+    get menuList() {
+        return menuList;
+    },
+    renderMenuList
+};
