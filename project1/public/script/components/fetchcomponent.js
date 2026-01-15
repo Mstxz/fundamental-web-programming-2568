@@ -1,3 +1,5 @@
+document.querySelectorAll('img').draggable = false;
+
 fetch('components/header.html').then(res => res.text()).then(data => {
     let head = document.querySelector('header');
 

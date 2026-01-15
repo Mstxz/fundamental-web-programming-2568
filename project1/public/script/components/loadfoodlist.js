@@ -64,7 +64,6 @@ function buildMenuItem(menu, template, index) {
                 const desc = document.getElementById('description');
                 let images = desc.querySelectorAll('img');
                 images[0].src = menu.imglinks;
-                images[1].src = `images/icon/foodsouls/${menu.id}.webp`;
                 desc.querySelector('h1').textContent = menu.name;
                 desc.querySelector('a').href = menu.source;
                 desc.querySelector('p').textContent = menu.desc;
@@ -72,6 +71,10 @@ function buildMenuItem(menu, template, index) {
                 /* ---- Food Fantasy Mode ---- */
                 let foodfantasy = document.getElementById('ff');
                 let fftoggle = document.getElementById('ffmode');
+
+                images[1].src = `images/icon/foodsouls/${menu.id}.webp`;
+                document.getElementById('rarity').src = `images/icon/icon_${menu.foodsoulinfo.rarity}.webp`;
+                document.getElementById('rpgclass').src = `images/icon/icon_${menu.foodsoulinfo.class}.webp`;
 
                 console.log(fftoggle, foodfantasy);
 
