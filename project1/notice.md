@@ -24,6 +24,16 @@ The background color changes over time.
 
 This website has worked background music player, it can be mute, skip, pause.
 
+### Filters
+
+You can filter the food
+- type
+- region
+
+### Switch on/off the game "Food Fantasy" Mode
+
+Because this web has included the game "Food Fantasy", so you can turn on and turn off
+
 ## Source
 
 - [Fandom - Food Fantasy Wiki](https://food-fantasy.fandom.com/wiki/Food_Fantasy_Wiki)
