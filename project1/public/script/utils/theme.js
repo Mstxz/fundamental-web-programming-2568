@@ -1,10 +1,10 @@
-let dark = "bg-ci-beige-2 text-ci-brown-1";
-let light = "bg-ci-main-1 text-black";
+let light = "bg-ci-beige-2 text-ci-brown-1";
+let dark = "bg-ci-brown-1 text-ci-beige-1";
 
 let d = new Date();
 
 if (d.getHours() < 18 && d.getHours() > 6) {
-    document.body.className = dark;
+    document.body.className = light;
 }
 else {
     document.body.className = dark;

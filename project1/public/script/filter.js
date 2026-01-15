@@ -16,7 +16,12 @@ function filterMenu(menuList, filters) {
                 ? menu.region.includes(filters.region)
                 : menu.region === filters.region);
 
-        return matchType && matchRegion;
+        const matchRPGClass =
+            !filters.rpgClass ||
+            filters.rpgClass === 'all' ||
+            menu.foodsoulinfo?.class === filters.rpgClass;
+
+        return matchType && matchRegion && matchRPGClass;
     });
 }
 
@@ -31,15 +36,16 @@ async function loadEmptyComponent() {
 async function reloadList() {
     const typeSelect = document.getElementById('filtertype');
     const regionSelect = document.getElementById('filterregion');
+    const classSelect = document.getElementById('filterrpgclass');
 
     const filters = {
         type: typeSelect?.value || '',
-        region: regionSelect?.value || ''
+        region: regionSelect?.value || '',
+        rpgClass: classSelect?.value || ''
     };
 
     const menuList = window.menuState?.menuList;
 
-    /* ---- data not ready or invalid ---- */
     if (!Array.isArray(menuList)) {
         await loadEmptyComponent();
         return;
@@ -47,7 +53,6 @@ async function reloadList() {
 
     const filteredMenus = filterMenu(menuList, filters);
 
-    /* ---- no results ---- */
     if (filteredMenus.length === 0) {
         await loadEmptyComponent();
         return;
@@ -55,5 +60,6 @@ async function reloadList() {
 
     window.menuState.renderMenuList(filteredMenus);
 }
+
 
 window.reloadList = reloadList;
