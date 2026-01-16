@@ -30,6 +30,7 @@
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --font-weight-light: 300;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
@@ -48,6 +49,7 @@
     --color-ci-red-1: #890524;
     --color-ci-brown-1: #6a4e4a;
     --color-ci-brown-2: #362320;
+    --color-ci-green-1: #6b765c;
     --color-ci-green-2: #3b4a38;
     --color-ci-green-3: #1c2d2a;
     --color-food: #69c94e;
@@ -58,6 +60,7 @@
     --color-support: #6bc580;
     --color-mage: #a46bc5;
     --font-ui: "Noto Serif", "Athiti", serif, sans-serif;
+    --font-thai: "Athiti", sans-serif;
   }
 }
 @layer base {
@@ -425,6 +428,9 @@
   .justify-around {
     justify-content: space-around;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
   .justify-center {
     justify-content: center;
   }
@@ -560,6 +566,9 @@
       background-color: color-mix(in oklab, var(--color-ci-brown-2) 85%, transparent);
     }
   }
+  .bg-ci-green-1 {
+    background-color: var(--color-ci-green-1);
+  }
   .bg-ci-green-2 {
     background-color: var(--color-ci-green-2);
   }
@@ -693,6 +702,9 @@
   .text-left {
     text-align: left;
   }
+  .font-thai {
+    font-family: var(--font-thai);
+  }
   .font-ui {
     font-family: var(--font-ui);
   }
@@ -727,6 +739,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -891,46 +907,6 @@
       display: none;
     }
   }
-  .\[\&\>a\]\:flex {
-    &>a {
-      display: flex;
-    }
-  }
-  .\[\&\>a\]\:w-25 {
-    &>a {
-      width: calc(var(--spacing) * 25);
-    }
-  }
-  .\[\&\>a\]\:items-center {
-    &>a {
-      align-items: center;
-    }
-  }
-  .\[\&\>a\]\:justify-evenly {
-    &>a {
-      justify-content: space-evenly;
-    }
-  }
-  .\[\&\>a\]\:rounded-lg {
-    &>a {
-      border-radius: var(--radius-lg);
-    }
-  }
-  .\[\&\>a\]\:bg-ci-red-1 {
-    &>a {
-      background-color: var(--color-ci-red-1);
-    }
-  }
-  .\[\&\>a\]\:p-2 {
-    &>a {
-      padding: calc(var(--spacing) * 2);
-    }
-  }
-  .\[\&\>a\]\:text-white {
-    &>a {
-      color: var(--color-white);
-    }
-  }
   .\[\&\>button\]\:text-2xl {
     &>button {
       font-size: var(--text-2xl);
@@ -972,6 +948,17 @@
   .\[\&\>li\]\:gap-2 {
     &>li {
       gap: calc(var(--spacing) * 2);
+    }
+  }
+  .\[\&\>option\]\:border-0 {
+    &>option {
+      border-style: var(--tw-border-style);
+      border-width: 0px;
+    }
+  }
+  .\[\&\>option\]\:bg-ci-brown-2 {
+    &>option {
+      background-color: var(--color-ci-brown-2);
     }
   }
   .\[\&\>section\]\:flex {

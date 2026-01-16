@@ -4,19 +4,29 @@
     <nav id="mainmenu" class="flex flex-col py-5">
         <h1 class="text-3xl"><i class="fa-solid fa-gear"></i> Settings</h1>
         <hr>
-        <div class="flex justify-left items-center text-xl gap-2">
-            <input type="checkbox" id="ffmode" class="w-5 h-5"><span>โหมดเกม Food Fantasy</span>
-            <div>
-                <span>ธีม:</span>
-                <select id="themecontrol">
+        <div class="flex flex-col justify-left text-xl gap-2 p-4">
+            <div class="flex justify-between">
+                <span>ธีม</span>
+                <select id="themecontrol" class="[&>option]:bg-ci-brown-2 [&>option]:border-0">
                     <option value="time">Time</option>
                     <option value="light">Light</option>
                     <option value="dark">Dark</option>
                 </select>
             </div>
+            <div><input checked type="checkbox" id="ffmode" class="w-5 h-5"> <span>โหมดเกม Food Fantasy</span></div>
         </div>
-        <button onclick="applySettings()">Apply</button>
+        <button onclick="applySettings()" class="bg-ci-green-1 px-2 py-1 rounded w-25">Apply <i class="fa-solid fa-wrench"></i></button>
     </nav>
+</div>
+
+<div class="p-5">
+    <h1 class="text-3xl"><i class="fa-solid fa-user"></i> Contact the Dev</h1>
+    <hr>
+    <ul class="text-xl font-thai font-light p-5">
+        <li><a target="_blank" href="https://github.com/Mstxz"><i class="fa-brands fa-github"></i> Github</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/mstxz.blend/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        <li><a target="_blank" href="https://mstxz.vercel.app/"><i class="fa-solid fa-globe"></i> Website</a></li>
+    </ul>
 </div>
 
 <div class="opacity-35 p-10 flex gap-3 items-center absolute bottom-30">

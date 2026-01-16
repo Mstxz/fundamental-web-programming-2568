@@ -34,6 +34,29 @@ window.closeOverlay = closeOverlay;
 
 function buildMenuItem(menu, template, index) {
     const menuelm = document.createElement('button');
+    let themecolor = getTheme();
+
+    let dark = "text-ci-beige-1 bg-ci-brown-2";
+    let light = "text-ci-brown-1 bg-ci-beige-2";
+
+    let themecolorcon = light;
+
+    if (themecolor == 'time'){
+        let d = new Date();
+
+        if (d.getHours() < 18 && d.getHours() > 6) {
+            themecolorcon = light;
+        }
+        else {
+            themecolorcon = dark;
+        }
+    }
+    else if(themecolor == 'dark') {
+        themecolorcon = dark;
+    }
+    else if(themecolor == 'light') {
+        themecolorcon = light;
+    }
 
     menuelm.className =
         'flex flex-row items-center border-b-8 border-r-4 border-t border-l ' +
@@ -55,9 +78,7 @@ function buildMenuItem(menu, template, index) {
                 document.body.appendChild(overlay);
 
                 const panel = overlay.querySelector('#panel');
-                panel.className =
-                    'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg h-[80vh] ' +
-                    'overflow-y-auto [&::-webkit-scrollbar]:hidden relative w-[80%] border-b-8 border-r-4 border-ci-red-1';
+                panel.className = `m-10 rounded-tl-3xl rounded-br-lg h-[80vh] overflow-y-auto [&::-webkit-scrollbar]:hidden relative w-[80%] border-b-8 border-r-4 border-ci-red-1` + themecolorcon;
                 panel.onclick = e => e.stopPropagation();
 
                 /* ---- description ---- */

@@ -36,9 +36,12 @@ function toggleTheme(){
     else if(opt.value == "dark"){
         document.body.className = dark;
     }
+}
 
+function getTheme(){
+    let opt = document.getElementById('themecontrol');
 
-
+    return opt.value;
 }
 
 function applySettings(){
