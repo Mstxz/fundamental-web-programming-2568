@@ -10,7 +10,7 @@ fetch('components/header.html').then(res => res.text()).then(data => {
 fetch('components/menu.html').then(res => res.text()).then(data => {
     let mainmenu = document.getElementById('menu')
 
-    mainmenu.className = "hidden right-0 top-0 bg-[rgba(30,30,30,0.5)] w-full lg:w-3/12 md:w-1/2 sm:w-full h-screen fixed z-40 text-ci-beige-1";
+    mainmenu.className = "hidden right-0 top-0 bg-ci-brown-2/85 w-full lg:w-3/12 md:w-1/2 sm:w-full h-screen fixed z-40 text-ci-beige-1";
     mainmenu.innerHTML = data;
 
 });

@@ -30,6 +30,7 @@ async function loadEmptyComponent() {
     const html = await res.text();
 
     const container = document.getElementById('menulist');
+    container.className = 'flex flex-col items-center justify-center opacity-50';
     container.innerHTML = html;
 }
 

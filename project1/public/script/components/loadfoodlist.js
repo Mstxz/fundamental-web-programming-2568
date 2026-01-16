@@ -57,7 +57,7 @@ function buildMenuItem(menu, template, index) {
                 const panel = overlay.querySelector('#panel');
                 panel.className =
                     'bg-ci-beige-2 m-10 rounded-tl-3xl rounded-br-lg h-[80vh] ' +
-                    'overflow-y-auto relative w-[80%]';
+                    'overflow-y-auto [&::-webkit-scrollbar]:hidden relative w-[80%] border-b-8 border-r-4 border-ci-red-1';
                 panel.onclick = e => e.stopPropagation();
 
                 /* ---- description ---- */

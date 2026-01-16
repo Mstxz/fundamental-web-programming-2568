@@ -1,6 +1,6 @@
-let fftoggle = document.getElementById('ffmode');
 
 function toggleFoodFantasyMode(){
+    let fftoggle = document.getElementById('ffmode');
     let ff = document.getElementById('ffopt');
 
     if (!fftoggle.checked){
