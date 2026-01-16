@@ -1,8 +1,7 @@
-function toggleFoodFantasyMode(){
-    let fftoggle = document.getElementById('ffmode');
-    let ff = document.getElementById('ffopt');
+let fftoggle = document.getElementById('ffmode');
 
-    console.log(ff);
+function toggleFoodFantasyMode(){
+    let ff = document.getElementById('ffopt');
 
     if (!fftoggle.checked){
         ff.style.display = "none";

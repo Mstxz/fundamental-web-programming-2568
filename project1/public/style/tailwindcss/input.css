@@ -3,6 +3,10 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-sm: 680px;
+  --breakpoint-md: 1000px;
+  --breakpoint-lg: 1500px;
+
   --color-ci-beige-1: #F0D2AE;
   --color-ci-beige-2: #E0B48C;
 
