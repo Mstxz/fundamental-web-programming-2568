@@ -24,5 +24,10 @@
   --color-dessert: #bf4ec9;
   --color-drinks: #4e77c9;
 
+  --color-attack: #c56b6b;
+  --color-defense: #6b7dc5;
+  --color-support: #6bc580;
+  --color-mage: #a46bc5;
+
   --font-ui: "Noto Serif", "Athiti", serif, sans-serif;
 }

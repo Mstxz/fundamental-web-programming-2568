@@ -2,9 +2,20 @@
 <div class="p-5">
     <h1 class="text-5xl">Menu</h1>
     <nav id="mainmenu" class="flex flex-col py-5">
+        <h1 class="text-3xl"><i class="fa-solid fa-gear"></i> Settings</h1>
+        <hr>
         <div class="flex justify-left items-center text-xl gap-2">
-            <input onclick="toggleFoodFantasyMode()" checked type="checkbox" id="ffmode" class="w-5 h-5"><span>โหมดเกม Food Fantasy</span>
+            <input type="checkbox" id="ffmode" class="w-5 h-5"><span>โหมดเกม Food Fantasy</span>
+            <div>
+                <span>ธีม:</span>
+                <select id="themecontrol">
+                    <option value="time">Time</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
         </div>
+        <button onclick="applySettings()">Apply</button>
     </nav>
 </div>
 
@@ -18,7 +29,7 @@
         <div class="w-10 h-10 rounded-full"></div>
     </div>
     <div class="flex flex-col w-3/4">
-        <h1 id="musicname" class="text-center text-xl">Restaurant</h1>
+        <h1 id="musicname" class="text-center text-xl">Gloriville</h1>
         <nav id="audiocontrollernav" class="flex justify-evenly p-3 [&>button]:text-2xl">
             <button id="mute" onclick="toggleAudio()" class="fa-solid fa-volume-high"></button>
             <button id="playbefore" onclick="playBefore()" class="fa-solid fa-backward"></button>

@@ -143,7 +143,7 @@ function buildMenuItem(menu, template, index) {
     };
 
     const wrapper = document.createElement('div');
-    wrapper.className = 'flex gap-2';
+    wrapper.className = 'grid grid-cols-2 gap-2';
 
     menu.type.forEach(t => {
         const cfg = typeMap[t];
@@ -156,6 +156,36 @@ function buildMenuItem(menu, template, index) {
             `<i class="fa-solid ${cfg.icon}"></i><span>${cfg.text}</span>`;
         wrapper.appendChild(badge);
     });
+
+    const rpgClassMap = {
+    mage:    { bg: 'bg-mage' },
+    attack:  { bg: 'bg-attack' },
+    support: { bg: 'bg-support' },
+    defense: { bg: 'bg-defense' },
+};
+
+    let fftoggle = document.getElementById('ffmode');
+
+    if (fftoggle.checked){
+        const rpgClass = menu.foodsoulinfo.class;
+        const rpgStyle = rpgClassMap[rpgClass] ?? { bg: 'bg-gray-400' };
+
+        const rpgbadge = document.createElement('div');
+        rpgbadge.className = `
+            flex items-center gap-1
+            text-sm
+            px-2 py-1
+            rounded
+            ${rpgStyle.bg}
+        `;
+
+        rpgbadge.innerHTML = `
+            <img width="20" height="20" src="images/icon/icon_${rpgClass}.webp" alt="${rpgClass}">
+            <span>${rpgClass}</span>
+        `;
+
+        wrapper.appendChild(rpgbadge);
+    }
 
     foodtype.appendChild(wrapper);
 
