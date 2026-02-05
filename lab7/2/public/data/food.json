@@ -1,0 +1,147 @@
+[
+  {
+    "id": "food1",
+    "name": "Sachertorte",
+    "region": "Austria",
+    "image": "./image/source/sachertorte.jpg",
+    "source": "https://www.sacher.com/en/original-sacher-torte/",
+    "ingredient": [
+      "Dark chocolate",
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Wheat flour",
+      "Apricot jam"
+    ],
+    "foodsoulimg": "./image/asset/sachertorte_foodsouls.webp",
+    "nutrition": {
+      "calories": 360,
+      "carbs": 38,
+      "protein": 5,
+      "fat": 22,
+      "sugar": 26,
+      "fiber": 3
+    }
+  },
+  {
+    "id": "food2",
+    "name": "Torta Caprese",
+    "region": "Italy",
+    "image": "./image/source/tortacaprese.jpg",
+    "source": "https://www.giallozafferano.com/recipes/Torta-Caprese.html",
+    "ingredient": [
+      "Dark chocolate",
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Ground almonds",
+      "Cocoa powder"
+    ],
+    "foodsoulimg": "./image/asset/tortacaprese_foodsouls.webp",
+    "nutrition": {
+      "calories": 390,
+      "carbs": 28,
+      "protein": 7,
+      "fat": 27,
+      "sugar": 22,
+      "fiber": 4
+    }
+  },
+  {
+    "id": "food3",
+    "name": "Affogato",
+    "region": "Italy",
+    "image": "./image/source/affogato.jpg",
+    "source": "https://www.pholfoodmafia.com/recipe/chocolate-affogato/",
+    "ingredient": [
+      "Espresso",
+      "Vanilla ice cream",
+      "Cocoa powder",
+      "Honey"
+    ],
+    "foodsoulimg": "./image/asset/affogato_foodsouls.webp",
+    "nutrition": {
+      "calories": 210,
+      "carbs": 28,
+      "protein": 4,
+      "fat": 9,
+      "sugar": 25,
+      "fiber": 1
+    }
+  },
+  {
+    "id": "food4",
+    "name": "Okonomiyaki",
+    "region": "Japan",
+    "image": "./image/source/okonomiyaki.jpg",
+    "source": "https://www.justonecookbook.com/okonomiyaki/",
+    "ingredient": [
+      "Wheat flour",
+      "Eggs",
+      "Cabbage",
+      "Pork belly or seafood",
+      "Okonomiyaki sauce",
+      "Japanese mayonnaise",
+      "Bonito flakes"
+    ],
+    "foodsoulimg": "./image/asset/okonomiyaki_foodsouls.webp",
+    "nutrition": {
+      "calories": 450,
+      "carbs": 35,
+      "protein": 18,
+      "fat": 26,
+      "sugar": 7,
+      "fiber": 3
+    }
+  },
+  {
+    "id": "food5",
+    "name": "Burrito",
+    "region": "Mexico",
+    "image": "./image/source/burrito.jpg",
+    "source": "https://cooking.nytimes.com/recipes/1024725-easy-burritos",
+    "ingredient": [
+      "Flour tortilla",
+      "Ground beef or chicken",
+      "Black beans or pinto beans",
+      "Rice",
+      "Onion",
+      "Tomatoes",
+      "Cheese",
+      "Chili sauce"
+    ],
+    "foodsoulimg": "./image/asset/burrito_foodsouls.webp",
+    "nutrition": {
+      "calories": 620,
+      "carbs": 65,
+      "protein": 28,
+      "fat": 28,
+      "sugar": 6,
+      "fiber": 7
+    }
+  },
+  {
+    "id": "food6",
+    "name": "Tiramisu",
+    "region": "Italy",
+    "image": "./image/source/tiramisu.jpg",
+    "source": "https://www.pholfoodmafia.com/recipe/classic-tiramisu/",
+    "ingredient": [
+      "Strong coffee or espresso",
+      "Egg yolks",
+      "Sugar",
+      "Mascarpone cheese",
+      "Ladyfingers",
+      "Cocoa powder"
+    ],
+    "foodsoulimg": "./image/asset/tiramisu_foodsouls.webp",
+    "nutrition": {
+      "calories": 410,
+      "carbs": 34,
+      "protein": 6,
+      "fat": 29,
+      "sugar": 25,
+      "fiber": 1
+    }
+  }
+]
