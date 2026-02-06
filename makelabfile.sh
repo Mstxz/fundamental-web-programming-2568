@@ -1,5 +1,4 @@
 #!/bin/bash
-
 mkdir "$1"
 
 if [ "$#" -lt 2 ]; then
@@ -8,7 +7,7 @@ if [ "$#" -lt 2 ]; then
 fi
 
 base_folder="$1"
-shift  # remove base_folder from arguments
+shift
 
 # Check base folder exists
 if [ ! -d "$base_folder" ]; then
@@ -16,18 +15,27 @@ if [ ! -d "$base_folder" ]; then
   exit 1
 fi
 
-# Loop through subfolders
 for folder in "$@"; do
   target="$base_folder/$folder"
 
-  # Create required directories
-  mkdir -p "$target/style"
-  mkdir -p "$target/script"
+  echo "Setting up $target..."
 
-  # Create files if they don't exist
-  touch "$target/style/index.css"
-  touch "$target/script/index.js"
-  touch "$target/index.html"
+  # Create directory structure
+  mkdir -p "$target/public/style"
+  mkdir -p "$target/public/script"
+  mkdir -p "$target/public/pages"
+
+
+  # Create files
+  touch "$target/public/index.html"
+  touch "$target/server.js"
+
+  # Init npm inside the project folder
+  (
+    cd "$target"
+    npm init -y
+    npm install express ejs mysql2 nodemon
+  )
 done
 
-echo "Setup completed."
+echo "Setup completed"
