@@ -34,7 +34,7 @@ for folder in "$@"; do
   (
     cd "$target"
     npm init -y
-    npm install express ejs mysql2 nodemon
+    npm install express ejs nodemon
   )
 done
 
