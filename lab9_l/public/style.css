@@ -1,0 +1,35 @@
+nav {
+  margin: 10px;
+  background: #1d1d1d;
+  padding: 10px;
+}
+
+.menuItems {
+    list-style: none;
+    display: flex;
+}
+
+li {
+      margin: 5px;
+}
+a {
+        text-decoration: none;
+        color: #8f8f8f;
+        font-size: 24px;
+}
+table{
+      width: 100%;
+      border-collapse: collapse;
+
+}
+tr, td{
+      border: 1px solid rgb(224, 222, 219);
+      padding: 12px;
+      text-align: left;
+}
+tr:nth-child(even){
+      background-color: rgb(156, 155, 153);
+}
+tr:nth-child(odd){
+      background-color: rgb(207, 206, 202);
+}
